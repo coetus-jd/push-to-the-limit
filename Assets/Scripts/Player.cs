@@ -5,31 +5,65 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     [SerializeField]
-    private float Velocity;
+    public float Accelartion;
+    
+    [SerializeField]
+    private float VerticalVelocity;
 
     [SerializeField]
-    private float StopForce = 20f;
+    private float HorizontalVelocity;
+
+    [SerializeField]
+    private float StopForce = 0.01f;
+
+    [SerializeField]
+    private float MaxRotationAngle = 30f;
 
     void Update()
     {
-        Movement();
+        HandleHorizontalMovement();
+        HandleVerticalMovement();
     }
 
-    private void Movement()
+    private void HandleHorizontalMovement()
     {
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S))
         {
             var verticalMovement = Input.GetAxis("Vertical");
-            Velocity += verticalMovement * Time.deltaTime;
+            VerticalVelocity += verticalMovement * Accelartion * Time.deltaTime;
         }
         else
         {
-            if (Velocity > 0)
-                Velocity -= StopForce * Time.deltaTime;
+            if (VerticalVelocity > 0)
+                VerticalVelocity -= StopForce * Time.deltaTime;
             else
-                Velocity = 0f;
+                VerticalVelocity = 0f;
         }
 
-        transform.position += (Velocity * Time.deltaTime) * transform.forward;
+        transform.position += (VerticalVelocity * Time.deltaTime) * transform.forward;
+    }
+
+    private void HandleVerticalMovement()
+    {
+        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
+        {
+            var horizontalMovement = Input.GetAxis("Horizontal");
+            HorizontalVelocity += horizontalMovement * Time.deltaTime;
+
+            transform.rotation = Quaternion.Slerp(
+                transform.rotation,
+                Quaternion.identity,
+                ((transform.rotation.y >= MaxRotationAngle || transform.rotation.y <= -MaxRotationAngle) ? 0f : (horizontalMovement * 1))
+            );
+        }
+        else
+        {
+            if (HorizontalVelocity > 0)
+                HorizontalVelocity -= StopForce * Time.deltaTime;
+            else
+                HorizontalVelocity = 0f;
+        }
+
+        transform.position += (HorizontalVelocity * Time.deltaTime) * transform.right;
     }
 }
