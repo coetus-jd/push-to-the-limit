@@ -30,7 +30,7 @@ namespace TimeRace.Scripts
             HandleVerticalMovement();
         }
 
-        private void HandleHorizontalMovement()
+        private void HandleVerticalMovement()
         {
             if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S))
             {
@@ -50,33 +50,13 @@ namespace TimeRace.Scripts
             transform.position += (VerticalVelocity * Time.deltaTime) * transform.forward;
         }
 
-        private void HandleVerticalMovement()
+        private void HandleHorizontalMovement()
         {
-            if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
-            {
-                var horizontalMovement = Input.GetAxis("Horizontal");
-                HorizontalVelocity += horizontalMovement * Time.deltaTime;
+            if (!Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.D))
+                return;
 
-                // var yRotation = 1;
-
-                Debug.Log(horizontalMovement);
-                // Debug.Log($"É menor que o máximo: {transform.eulerAngles.y < MaxRotationAngle}");
-                // Debug.Log($"É maior que o mínimo: {transform.eulerAngles.y > (MaxRotationAngle * -1)}");
-
-                if (transform.eulerAngles.y < MaxRotationAngle && transform.eulerAngles.y > (MaxRotationAngle * -1))
-                    transform.Rotate(0, 1 * horizontalMovement, 0, Space.Self);
-                else
-                    transform.Rotate(0, 1 * (horizontalMovement * -1), 0, Space.Self);
-            }
-            else
-            {
-                if (HorizontalVelocity > 0)
-                    HorizontalVelocity -= StopForce * Time.deltaTime;
-                else
-                    HorizontalVelocity = 0f;
-            }
-
-            transform.position += (HorizontalVelocity * Time.deltaTime) * transform.right;
+            var horizontalMovement = Input.GetAxis("Horizontal");
+            transform.Rotate(0, 1 * horizontalMovement, 0, Space.Self);
         }
     }
 }
