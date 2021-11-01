@@ -6,6 +6,14 @@ namespace TimeRace.Scripts
 {
     public class Player : MonoBehaviour
     {
+        [Header ("Physics")]
+        [SerializeField]
+        private Collider CarCollider;
+
+        [SerializeField]
+        private Rigidbody rb;
+
+        [Header ("Velocity")]
         [SerializeField]
         private float Acceleration;
 
@@ -23,6 +31,25 @@ namespace TimeRace.Scripts
 
         [SerializeField]
         private float MaxSpeed = 40f;
+
+        void Start() {
+
+        rb = GetComponent<Rigidbody>();
+        
+
+        }
+
+
+        void FixedUpdate() 
+        {
+            Accelerator();
+        }
+
+        void Accelerator ()
+        {
+            
+
+        }
 
         void Update()
         {
