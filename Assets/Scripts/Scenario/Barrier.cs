@@ -6,6 +6,9 @@ namespace TimeRace.Scripts.Scenario
 {
     public class Barrier : MonoBehaviour
     {
+        [SerializeField]
+        private float Damage = 1f;
+
         void OnCollisionStay(Collision collision)
         {
             if (!collision.gameObject.CompareTag("Player"))
@@ -13,7 +16,17 @@ namespace TimeRace.Scripts.Scenario
 
             var player = collision.gameObject.GetComponent<Player>();
 
-            player?.TakeDamage(1f);
+            player?.TakeDamage(Damage);
+
+            var playerRb = player.GetComponent<Rigidbody>();
+            
+            if (playerRb == null || playerRb.velocity.z <= 0)
+                return;
+            
+            playerRb.AddForce(
+                new Vector3(0, 0, -1),
+                ForceMode.Acceleration
+            );
         }
     }
 }
