@@ -6,6 +6,7 @@ TagManager:
   tags:
   - WallCollider
   - Ground
+  - Ramp
   layers:
   - Default
   - TransparentFX

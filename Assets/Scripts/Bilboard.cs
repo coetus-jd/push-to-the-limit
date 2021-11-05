@@ -9,19 +9,14 @@ public class Bilboard : MonoBehaviour
 
     [SerializeField]
     private bool useStaticBillboard;
-    
 
     void LateUpdate()
     {
-        if(!useStaticBillboard)
-        {
+        if (!useStaticBillboard)
             transform.LookAt(MainCam.transform);
-        }else
-        {
+        else
             transform.rotation = MainCam.transform.rotation;
-        }
-        
-        transform.rotation = Quaternion.Euler(0f, transform.rotation.eulerAngles.y, 0f);
 
+        transform.rotation = Quaternion.Euler(0f, transform.rotation.eulerAngles.y, 0f);
     }
 }
