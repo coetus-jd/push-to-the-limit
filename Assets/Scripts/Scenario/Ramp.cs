@@ -2,8 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
-namespace TimeRace.Scripts
+namespace TimeRace.Scripts.Scenario
 {
     public class Ramp : MonoBehaviour
     {

@@ -32,6 +32,9 @@ namespace TimeRace.Scripts
         [SerializeField]
         private float MaxSpeed = 40f;
 
+        [SerializeField]
+        private float Life = 100f;
+        
         void Start() {
 
         rb = GetComponent<Rigidbody>();
@@ -84,6 +87,12 @@ namespace TimeRace.Scripts
 
             var horizontalMovement = Input.GetAxis("Horizontal");
             transform.Rotate(0, 1 * horizontalMovement, 0, Space.Self);
+        }
+
+
+        public void TakeDamage(float damage)
+        {
+            Life -= damage;
         }
     }
 }
