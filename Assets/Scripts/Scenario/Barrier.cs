@@ -24,7 +24,7 @@ namespace TimeRace.Scripts.Scenario
                 return;
             
             playerRb.AddForce(
-                new Vector3(0, 0, -1),
+                new Vector3(0, 0, Time.deltaTime * -1),
                 ForceMode.Acceleration
             );
         }

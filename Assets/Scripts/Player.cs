@@ -6,14 +6,14 @@ namespace TimeRace.Scripts
 {
     public class Player : MonoBehaviour
     {
-        [Header ("Physics")]
+        [Header("Physics")]
         [SerializeField]
         private Collider CarCollider;
 
         [SerializeField]
         private Rigidbody rb;
 
-        [Header ("Velocity")]
+        [Header("Velocity")]
         [SerializeField]
         private float Acceleration;
 
@@ -34,24 +34,10 @@ namespace TimeRace.Scripts
 
         [SerializeField]
         private float Life = 100f;
-        
-        void Start() {
 
-        rb = GetComponent<Rigidbody>();
-        
-
-        }
-
-
-        void FixedUpdate() 
+        void Start()
         {
-            Accelerator();
-        }
-
-        void Accelerator ()
-        {
-            
-
+            rb = GetComponent<Rigidbody>();
         }
 
         void Update()
@@ -88,7 +74,6 @@ namespace TimeRace.Scripts
             var horizontalMovement = Input.GetAxis("Horizontal");
             transform.Rotate(0, 1 * horizontalMovement, 0, Space.Self);
         }
-
 
         public void TakeDamage(float damage)
         {
