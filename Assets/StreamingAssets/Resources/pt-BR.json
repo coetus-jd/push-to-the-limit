@@ -1,10 +1,14 @@
 {
-    "Scientist": {
+    "introduction": {
         "texts": [
-            ""
+            "Hi",
+            "Hi",
+            "How are you?",
+            "I'm fine and you?",
+            "I'm cool man, thanks for asking"
         ]
     },
-    "Boy": {
+    "final": {
         "texts": [
             ""
         ]

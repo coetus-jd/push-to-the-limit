@@ -4,7 +4,7 @@ using System.IO;
 using System.Reflection;
 using UnityEngine;
 
-namespace PirateCave.Resources
+namespace TimeRace.Resources
 {
     /// <summary>
     /// Todos os textos que são necessários na interface do jogo
@@ -38,19 +38,16 @@ namespace PirateCave.Resources
     [Serializable]
     public class AllResources
     {
-        public Scientist Scientist;
-        public Apprentice Apprentice;
+        public Introduction Introduction;
+        public Final Final;
     }
 
     [Serializable]
     public class ResourceBase
     {
-        public List<string> texts;
+        public List<string> Texts;
     }
 
-    [Serializable]
-    public class Scientist : ResourceBase {}
-
-    [Serializable]
-    public class Apprentice : ResourceBase {}
+    public class Introduction : ResourceBase { }
+    public class Final : ResourceBase { }
 }
