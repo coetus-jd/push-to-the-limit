@@ -2,6 +2,7 @@ using System.Collections;
 using TMPro;
 using UnityEngine;
 using TimeRace.Resources;
+using System.Linq;
 
 namespace TimeRace.UI
 {
@@ -12,6 +13,8 @@ namespace TimeRace.UI
         /// </summary>
         [SerializeField]
         protected GameObject DialogPanel1;
+
+        protected GameObject Dialog1Text;
 
         /// <summary>
         /// A segunda "pessoa" do dialog
@@ -31,19 +34,22 @@ namespace TimeRace.UI
         protected bool SecondPersonStarts;
 
         /// <summary>
+        /// Quais textos estarão sendo utilizados nos diálogos
+        /// </summary>
+        protected ResourceBase ResourceBase;
+
+        /// <summary>
         /// Indica o índice do próximo texto
         /// </summary>
-        protected int NextDialogTextIndex;
+        private int NextDialogTextIndex;
 
-        protected bool IsLastIndex
+        private bool IsLastIndex
         {
             get
             {
                 return NextDialogTextIndex == ResourceBase.Texts.Count - 1;
             }
         }
-
-        protected ResourceBase ResourceBase;
 
         void Start()
         {
@@ -63,6 +69,7 @@ namespace TimeRace.UI
         public void NextDialog()
         {
             CurrentDialog.SetActive(false);
+            CurrentDialog = CurrentDialog == DialogPanel1 ? DialogPanel2 : DialogPanel1;
 
             if (IsLastIndex)
                 FinishDialog();
@@ -75,10 +82,9 @@ namespace TimeRace.UI
 
         private void OpenDialog()
         {
-            CurrentDialog = CurrentDialog == DialogPanel1 ? DialogPanel2 : DialogPanel1;
-
             CurrentDialog.SetActive(true);
-            CurrentDialog.GetComponentInChildren<TextMeshProUGUI>()
+            CurrentDialog.GetComponentsInChildren<TextMeshProUGUI>()
+                .Last()
                 .text = ResourceBase.Texts[NextDialogTextIndex];
         }
 

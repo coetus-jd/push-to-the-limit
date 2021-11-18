@@ -1,6 +1,6 @@
 {
-    "introduction": {
-        "texts": [
+    "Introduction": {
+        "Texts": [
             "Hi",
             "Hi",
             "How are you?",
@@ -8,8 +8,8 @@
             "I'm cool man, thanks for asking"
         ]
     },
-    "final": {
-        "texts": [
+    "Final": {
+        "Texts": [
             ""
         ]
     }

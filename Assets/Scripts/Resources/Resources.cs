@@ -48,6 +48,9 @@ namespace TimeRace.Resources
         public List<string> Texts;
     }
 
+    [Serializable]
     public class Introduction : ResourceBase { }
+
+    [Serializable]
     public class Final : ResourceBase { }
 }
