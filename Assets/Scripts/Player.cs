@@ -35,9 +35,14 @@ namespace TimeRace.Scripts
         [SerializeField]
         private float Life = 100f;
 
+
+        [Header("Animation")]
+        private Animator Animator;
+
         void Start()
         {
             rb = GetComponent<Rigidbody>();
+            Animator = GetComponent<Animator>();
         }
 
         void Update()
@@ -63,15 +68,21 @@ namespace TimeRace.Scripts
                     VerticalVelocity = 0f;
             }
 
+            Animator.SetFloat("Acceleration", VerticalVelocity);
+
             transform.position += (VerticalVelocity * Time.deltaTime) * transform.forward;
         }
 
         private void HandleHorizontalMovement()
         {
             if (!Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.D))
+            {
+                Animator.SetBool("Curving", false);
                 return;
+            }
 
             var horizontalMovement = Input.GetAxis("Horizontal");
+            Animator.SetBool("Curving", true);
             transform.Rotate(0, 1 * horizontalMovement, 0, Space.Self);
         }
 
