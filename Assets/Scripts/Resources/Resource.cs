@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Reflection;
 using UnityEngine;
 
 namespace TimeRace.Resources
@@ -38,8 +37,9 @@ namespace TimeRace.Resources
     [Serializable]
     public class AllResources
     {
-        public Introduction Introduction;
-        public Final Final;
+        public ResourceBase Introduction;
+        public ResourceBase Explication;
+        public ResourceBase Final;
     }
 
     [Serializable]
@@ -47,10 +47,4 @@ namespace TimeRace.Resources
     {
         public List<string> Texts;
     }
-
-    [Serializable]
-    public class Introduction : ResourceBase { }
-
-    [Serializable]
-    public class Final : ResourceBase { }
 }

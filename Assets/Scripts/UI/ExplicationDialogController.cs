@@ -6,11 +6,11 @@ using UnityEngine.UI;
 
 namespace TimeRace.UI
 {
-    public class FinalDialogController : BaseDialogController
+    public class ExplicationDialogController : BaseDialogController
     {
         void Awake()
         {
-            ResourceBase = Resource.Language["pt-BR"].Final;
+            ResourceBase = Resource.Language["pt-BR"].Explication;
         }
     }
 }

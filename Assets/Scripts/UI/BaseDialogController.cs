@@ -3,6 +3,7 @@ using TMPro;
 using UnityEngine;
 using TimeRace.Resources;
 using System.Linq;
+using UnityEngine.UI;
 
 namespace TimeRace.UI
 {
@@ -13,8 +14,6 @@ namespace TimeRace.UI
         /// </summary>
         [SerializeField]
         protected GameObject DialogPanel1;
-
-        protected GameObject Dialog1Text;
 
         /// <summary>
         /// A segunda "pessoa" do dialog
@@ -53,6 +52,12 @@ namespace TimeRace.UI
 
         void Start()
         {
+            DialogPanel1.GetComponentInChildren<Button>()
+                ?.onClick.AddListener(delegate { NextDialog(); });
+
+            DialogPanel2.GetComponentInChildren<Button>()
+                ?.onClick.AddListener(delegate { NextDialog(); });
+                
             CurrentDialog = SecondPersonStarts
                 ? DialogPanel2
                 : DialogPanel1;
