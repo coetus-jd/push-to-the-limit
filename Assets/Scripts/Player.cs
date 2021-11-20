@@ -39,9 +39,12 @@ namespace TimeRace.Scripts
         [Header("Animation")]
         private Animator Animator;
 
+        private SpriteRenderer SpriteRenderer;
+
         void Start()
         {
             rb = GetComponent<Rigidbody>();
+            SpriteRenderer = GetComponent<SpriteRenderer>();
             Animator = GetComponent<Animator>();
         }
 
@@ -82,6 +85,9 @@ namespace TimeRace.Scripts
             }
 
             var horizontalMovement = Input.GetAxis("Horizontal");
+
+            SpriteRenderer.flipX = horizontalMovement >= 0 ? false : true;
+
             Animator.SetBool("Curving", true);
             transform.Rotate(0, 1 * horizontalMovement, 0, Space.Self);
         }
