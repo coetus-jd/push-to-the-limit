@@ -1,25 +1,108 @@
 {
-    "Introduction": {
-        "Texts": [
-            "Você tem noção da merda que fez?! A nave do tempo ainda não é totalmente segura... o que tinha na cabeça?",
-            "Eu só queria fazer alguns investimentos de sucesso no passado e ser rico no futuro!",
-            "[suspiro]Ahhh! Não seria tão simples assim... nesse momento você precisa sair dai, se mantenha na pista e não bata nos objetos, nesse momento você está em um lugar nulo e precisa sair dai o mais rápido possível, ENTÃO CORRA!"
-        ]
-    },
-    "Explication": {
-        "Texts": [
-            "O que é esse espaço 'nulo' doutor?",
-            "Eu chamo isso de EPR, Espaço Paralelo ao Real, em minhas pesquisas esse lugar existe entre nosso mundo e um vácuo.",
-            "Por quê seu desespero sobre eu estar aqui?",
-            "Entenda ao viajar no tempo você tá bagunçando tudo, em tese, não podemos viajar no tempo, esse espaço parece que existe apenas para impedir um desequilibrio natural, para isso preciso pesquisar mais, para saber como evitar esse lugar."
-        ]
-    },
-    "Final": {
-        "Texts": [
-            "O que teria acontecido se eu tivesse conseguido, realizar os investimentos no passado?",
-            "Pelo que sei nada mudaria, o EPR existe para impedir mudança desnecessárias na linha temporal, de alguma forma ela impede mudanças que não deveriam acontecer, e se essas mudanças acontecem provavelmente novos universos são gerados.",
-            "Então sua esposa e filhos podem estar vivos em outros universos?",
-            "[Silêncio seguido de suspiro]ahhh! Infelizmente não!"
-        ]
-    }
+    "Introduction": [
+        {
+            "Text": "Você tem noção da merda que fez?! A máquina do tempo ainda não é totalmente segura... o que tinha na cabeça?",
+            "PersonName": "Doutor"
+        },
+        {
+            "Text": "Eu só queria fazer alguns investimentos de sucesso no passado e ser rico no futuro!",
+            "PersonName": "Aprendiz"
+        },
+        {
+            "Text": "[suspiro] Ahhh! Não seria tão simples assim... se mantenha na pista e não bata nas laterais, você precisa sair daí o mais rápido possível, então pegue as esferas de antimatéria E CORRA!",
+            "PersonName": "Doutor"
+        }
+    ],
+    "Explication": [
+        {
+            "Text": "Por quê seu desespero sobre eu estar aqui?",
+            "PersonName": "Aprendiz"
+        },
+        {
+            "Text": "Entenda que ao viajar no tempo você tá bagunçando tudo, em tese, não podemos viajar no tempo",
+            "PersonName": "Doutor"
+        },
+        {
+            "Text": "Além do mais, a antimatéria é instável, precisa pegá-la a tempo antes que desapareça e fique preso aí!",
+            "PersonName": "Doutor"
+        },
+        {
+            "Text": "Que lugar é esse doutor?",
+            "PersonName": "Aprendiz"
+        },
+        {
+            "Text": "Um lugar no extremo passado, quando a terra ainda estava se formando.",
+            "PersonName": "Doutor"
+        },
+        {
+            "Text": "E como essa pista veio parar aqui?",
+            "PersonName": "Aprendiz"
+        },
+        {
+            "Text": "Um experimento antigo meu",
+            "PersonName": "Doutor"
+        },
+        {
+            "Text": "Estava testando a máquina e ela abriu uma fenda dimensional que levou a pista de testes a sua volta para algum momento no tempo onde houvesse mais antimatéria, ao invés de mandar ela mesma",
+            "PersonName": "Doutor"
+        },
+        {
+            "Text": "Isso aconteceu algumas vezes...",
+            "PersonName": "Doutor"
+        },
+        {
+            "Text": "Isso significa que ela está funcionando agora, certo?",
+            "PersonName": "Aprendiz"
+        },
+        {
+            "Text": "Aparentemente sim. Mas não sei se está devidamente calibrado para ir ao futuro, cuidado!",
+            "PersonName": "Doutor"
+        }
+    ],
+    "FullAntiimatter": [
+        {
+            "Text": "Você está quase lá o medidor de combústivel está quase cheio!",
+            "PersonName": "Doutor"
+        }
+    ],
+    "RunningOutOfTime": [
+        {
+            "Text": "Anda logo garoto! O tempo está acabando! A antimatéria logo vai sumir!",
+            "PersonName": "Doutor"
+        }
+    ],
+    "HitBorderTwice": [
+        {
+            "Text": "Cuidado garoto! Você não é indestrútivel!",
+            "PersonName": "Doutor"
+        }
+    ],
+    "ToTheFuture": [
+        {
+            "Text": "Ué! Esse não é o nosso tempo!",
+            "PersonName": "Aprendiz"
+        },
+        {
+            "Text": "Avançamos demais! Eu disse que essa coisa estava descalibrada!",
+            "PersonName": "Doutor"
+        },
+        {
+            "Text": "E agora?",
+            "PersonName": "Aprendiz"
+        },
+        {
+            "Text": "Pegue o combustível, vou tentar reprogramar o código de capacitação de fluxo temporal, aguenta aí!",
+            "PersonName": "Doutor"
+        }
+    ],
+    "TurnWithoutHit": [
+        {
+            "Text": "E aí doutor? Sei pilotar bem um avião ou não?",
+            "PersonName": "Aprendiz"
+        },
+        {
+            "Text": "Técnicamente é um Ecranoplano, mas está indo bem, mas foque no que precisa fazer!",
+            "PersonName": "Doutor"
+        }
+    ]
 }

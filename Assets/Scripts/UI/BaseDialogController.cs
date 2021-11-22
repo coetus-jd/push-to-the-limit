@@ -4,6 +4,7 @@ using UnityEngine;
 using TimeRace.Resources;
 using System.Linq;
 using UnityEngine.UI;
+using System.Collections.Generic;
 
 namespace TimeRace.UI
 {
@@ -35,18 +36,23 @@ namespace TimeRace.UI
         /// <summary>
         /// Quais textos estarão sendo utilizados nos diálogos
         /// </summary>
-        protected ResourceBase ResourceBase;
+        protected List<ResourceBase> ResourceBase;
 
         /// <summary>
         /// Indica o índice do próximo texto
         /// </summary>
         private int NextDialogTextIndex;
 
+        /// <summary>
+        /// O nome da última pessoa a falar
+        /// </summary>
+        private string PastPersonName;
+
         private bool IsLastIndex
         {
             get
             {
-                return NextDialogTextIndex == ResourceBase.Texts.Count - 1;
+                return NextDialogTextIndex == ResourceBase.Count - 1;
             }
         }
 
@@ -57,7 +63,7 @@ namespace TimeRace.UI
 
             DialogPanel2.GetComponentInChildren<Button>()
                 ?.onClick.AddListener(delegate { NextDialog(); });
-                
+
             CurrentDialog = SecondPersonStarts
                 ? DialogPanel2
                 : DialogPanel1;
@@ -74,15 +80,19 @@ namespace TimeRace.UI
         public void NextDialog()
         {
             CurrentDialog.SetActive(false);
-            CurrentDialog = CurrentDialog == DialogPanel1 ? DialogPanel2 : DialogPanel1;
 
             if (IsLastIndex)
-                FinishDialog();
-            else
             {
-                NextDialogTextIndex++;
-                OpenDialog();
+                FinishDialog();
+                return;
             }
+
+            NextDialogTextIndex++;
+
+            if (PastPersonName != ResourceBase[NextDialogTextIndex].PersonName)
+                CurrentDialog = CurrentDialog == DialogPanel1 ? DialogPanel2 : DialogPanel1;
+            
+            OpenDialog();
         }
 
         private void OpenDialog()
@@ -90,7 +100,8 @@ namespace TimeRace.UI
             CurrentDialog.SetActive(true);
             CurrentDialog.GetComponentsInChildren<TextMeshProUGUI>()
                 .Last()
-                .text = ResourceBase.Texts[NextDialogTextIndex];
+                .text = ResourceBase[NextDialogTextIndex].Text;
+            PastPersonName = ResourceBase[NextDialogTextIndex].PersonName;
         }
 
         private void FinishDialog()

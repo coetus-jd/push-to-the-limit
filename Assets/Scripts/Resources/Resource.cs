@@ -37,14 +37,19 @@ namespace TimeRace.Resources
     [Serializable]
     public class AllResources
     {
-        public ResourceBase Introduction;
-        public ResourceBase Explication;
-        public ResourceBase Final;
+        public List<ResourceBase> Introduction;
+        public List<ResourceBase> Explication;
+        public List<ResourceBase> FullAntiimatter;
+        public List<ResourceBase> RunningOutOfTime;
+        public List<ResourceBase> HitBorderTwice;
+        public List<ResourceBase> ToTheFuture;
+        public List<ResourceBase> TurnWithoutHit;
     }
 
     [Serializable]
     public class ResourceBase
     {
-        public List<string> Texts;
+        public string Text;
+        public string PersonName;
     }
 }
