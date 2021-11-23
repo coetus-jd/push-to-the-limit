@@ -3,7 +3,7 @@ using TMPro;
 using UnityEngine;
 using TimeRace.Resources;
 
-namespace TimeRace.UI
+namespace TimeRace.UI.Dialog
 {
     public class Introduction : BaseDialogController
     {

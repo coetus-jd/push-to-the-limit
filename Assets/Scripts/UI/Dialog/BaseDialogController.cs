@@ -6,7 +6,7 @@ using System.Linq;
 using UnityEngine.UI;
 using System.Collections.Generic;
 
-namespace TimeRace.UI
+namespace TimeRace.UI.Dialog
 {
     public class BaseDialogController : MonoBehaviour
     {
@@ -37,7 +37,7 @@ namespace TimeRace.UI
         /// Define se o diálogo será interativo
         /// </summary>
         [SerializeField]
-        private bool Interactable = true;
+        private bool Interactable;
 
         /// <summary>
         /// Quais textos estarão sendo utilizados nos diálogos
@@ -75,6 +75,12 @@ namespace TimeRace.UI
                 : DialogPanel1;
 
             StartDialog();
+        }
+
+        void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.Space))
+                NextDialog();
         }
 
         private void StartDialog()

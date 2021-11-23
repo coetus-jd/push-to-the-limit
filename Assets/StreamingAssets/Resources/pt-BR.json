@@ -39,7 +39,7 @@
             "PersonName": "Aprendiz"
         },
         {
-            "Text": "Um experimento antigo meu",
+            "Text": "É um experimento antigo meu...",
             "PersonName": "Doutor"
         },
         {
@@ -55,7 +55,7 @@
             "PersonName": "Aprendiz"
         },
         {
-            "Text": "Aparentemente sim. Mas não sei se está devidamente calibrado para ir ao futuro, cuidado!",
+            "Text": "Aparentemente sim. Mas não sei se está devidamente calibrada para ir ao futuro, cuidado!",
             "PersonName": "Doutor"
         }
     ],
@@ -63,21 +63,21 @@
         {
             "Text": "Você está quase lá o medidor de combústivel está quase cheio!",
             "PersonName": "Doutor",
-            "TimeToLeave": 3
+            "TimeToLeave": 5
         }
     ],
     "RunningOutOfTime": [
         {
             "Text": "Anda logo garoto! O tempo está acabando! A antimatéria logo vai sumir!",
             "PersonName": "Doutor",
-            "TimeToLeave": 3
+            "TimeToLeave": 5
         }
     ],
     "HitBorderTwice": [
         {
             "Text": "Cuidado garoto! Você não é indestrútivel!",
             "PersonName": "Doutor",
-            "TimeToLeave": 3
+            "TimeToLeave": 5
         }
     ],
     "ToTheFuture": [
@@ -101,11 +101,13 @@
     "TurnWithoutHit": [
         {
             "Text": "E aí doutor? Sei pilotar bem um avião ou não?",
-            "PersonName": "Aprendiz"
+            "PersonName": "Aprendiz",
+            "TimeToLeave": 5
         },
         {
-            "Text": "Técnicamente é um Ecranoplano, mas está indo bem, mas foque no que precisa fazer!",
-            "PersonName": "Doutor"
+            "Text": "Técnicamente é um Ecranoplano, mas está indo bem, porém foque no que precisa fazer!",
+            "PersonName": "Doutor",
+            "TimeToLeave": 7
         }
     ]
 }

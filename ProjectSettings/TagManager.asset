@@ -7,6 +7,8 @@ TagManager:
   - WallCollider
   - Ground
   - Ramp
+  - Dialog
+  - DialogController
   layers:
   - Default
   - TransparentFX
