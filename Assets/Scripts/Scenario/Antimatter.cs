@@ -6,11 +6,17 @@ namespace TimeRace.Scripts.Scenario
 {
     public class Antimatter : MonoBehaviour
     {
+        [SerializeField]
+        private AntimatterManager AntimatterManager;
+
         private GameObject Player;
 
         void Start()
         {
             Player = GameObject.FindGameObjectWithTag("Player");
+            AntimatterManager = GameObject
+                .FindGameObjectWithTag("AntimatterManager")
+                .GetComponent<AntimatterManager>();
         }
 
         void Update()
@@ -23,6 +29,7 @@ namespace TimeRace.Scripts.Scenario
             if (!other.gameObject.CompareTag("Player"))
                 return;
             
+            AntimatterManager.Add(1);
             Destroy(gameObject);
         }
     }

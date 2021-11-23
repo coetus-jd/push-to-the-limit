@@ -63,21 +63,21 @@
         {
             "Text": "Você está quase lá o medidor de combústivel está quase cheio!",
             "PersonName": "Doutor",
-            "TimeToLeave": 5
+            "TimeToLeave": 10
         }
     ],
     "RunningOutOfTime": [
         {
             "Text": "Anda logo garoto! O tempo está acabando! A antimatéria logo vai sumir!",
             "PersonName": "Doutor",
-            "TimeToLeave": 5
+            "TimeToLeave": 10
         }
     ],
     "HitBorderTwice": [
         {
             "Text": "Cuidado garoto! Você não é indestrútivel!",
             "PersonName": "Doutor",
-            "TimeToLeave": 5
+            "TimeToLeave": 10
         }
     ],
     "ToTheFuture": [
@@ -102,12 +102,12 @@
         {
             "Text": "E aí doutor? Sei pilotar bem um avião ou não?",
             "PersonName": "Aprendiz",
-            "TimeToLeave": 5
+            "TimeToLeave": 10
         },
         {
             "Text": "Técnicamente é um Ecranoplano, mas está indo bem, porém foque no que precisa fazer!",
             "PersonName": "Doutor",
-            "TimeToLeave": 7
+            "TimeToLeave": 12
         }
     ]
 }

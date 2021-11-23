@@ -43,6 +43,7 @@ namespace TimeRace.Scripts
         {
             TimerIsRunning = true;
         }
+
         void Update()
         {
             if (!TimerIsRunning)

@@ -9,6 +9,7 @@ TagManager:
   - Ramp
   - Dialog
   - DialogController
+  - AntimatterManager
   layers:
   - Default
   - TransparentFX
