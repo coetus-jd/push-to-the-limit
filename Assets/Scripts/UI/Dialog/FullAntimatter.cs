@@ -5,11 +5,11 @@ using TimeRace.Resources;
 
 namespace TimeRace.UI
 {
-    public class IntroductionDialogController : BaseDialogController
+    public class FullAntimatter : BaseDialogController
     {
         void Awake()
         {
-            ResourceBase = Resource.Language["pt-BR"].Introduction;
+            ResourceBase = Resource.Language["pt-BR"].FullAntimatter;
         }
     }
 }

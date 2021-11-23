@@ -59,22 +59,25 @@
             "PersonName": "Doutor"
         }
     ],
-    "FullAntiimatter": [
+    "FullAntimatter": [
         {
             "Text": "Você está quase lá o medidor de combústivel está quase cheio!",
-            "PersonName": "Doutor"
+            "PersonName": "Doutor",
+            "TimeToLeave": 3
         }
     ],
     "RunningOutOfTime": [
         {
             "Text": "Anda logo garoto! O tempo está acabando! A antimatéria logo vai sumir!",
-            "PersonName": "Doutor"
+            "PersonName": "Doutor",
+            "TimeToLeave": 3
         }
     ],
     "HitBorderTwice": [
         {
             "Text": "Cuidado garoto! Você não é indestrútivel!",
-            "PersonName": "Doutor"
+            "PersonName": "Doutor",
+            "TimeToLeave": 3
         }
     ],
     "ToTheFuture": [

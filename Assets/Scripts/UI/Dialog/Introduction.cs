@@ -2,15 +2,14 @@ using System.Collections;
 using TMPro;
 using UnityEngine;
 using TimeRace.Resources;
-using UnityEngine.UI;
 
 namespace TimeRace.UI
 {
-    public class ExplicationDialogController : BaseDialogController
+    public class Introduction : BaseDialogController
     {
         void Awake()
         {
-            ResourceBase = Resource.Language["pt-BR"].Explication;
+            ResourceBase = Resource.Language["pt-BR"].Introduction;
         }
     }
 }

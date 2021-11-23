@@ -39,7 +39,7 @@ namespace TimeRace.Resources
     {
         public List<ResourceBase> Introduction;
         public List<ResourceBase> Explication;
-        public List<ResourceBase> FullAntiimatter;
+        public List<ResourceBase> FullAntimatter;
         public List<ResourceBase> RunningOutOfTime;
         public List<ResourceBase> HitBorderTwice;
         public List<ResourceBase> ToTheFuture;
@@ -51,5 +51,6 @@ namespace TimeRace.Resources
     {
         public string Text;
         public string PersonName;
+        public int TimeToLeave;
     }
 }

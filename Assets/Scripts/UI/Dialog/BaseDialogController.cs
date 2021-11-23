@@ -34,6 +34,12 @@ namespace TimeRace.UI
         protected bool SecondPersonStarts;
 
         /// <summary>
+        /// Define se o diálogo será interativo
+        /// </summary>
+        [SerializeField]
+        private bool Interactable = true;
+
+        /// <summary>
         /// Quais textos estarão sendo utilizados nos diálogos
         /// </summary>
         protected List<ResourceBase> ResourceBase;
@@ -73,7 +79,9 @@ namespace TimeRace.UI
 
         private void StartDialog()
         {
-            Time.timeScale = 0f;
+            if (Interactable)
+                Time.timeScale = 0f;
+
             OpenDialog();
         }
 
@@ -102,11 +110,21 @@ namespace TimeRace.UI
                 .Last()
                 .text = ResourceBase[NextDialogTextIndex].Text;
             PastPersonName = ResourceBase[NextDialogTextIndex].PersonName;
+
+            if (ResourceBase[NextDialogTextIndex].TimeToLeave > 0)
+                StartCoroutine(WaitDialogFinish());
+        }
+
+        private IEnumerator WaitDialogFinish()
+        {
+            yield return new WaitForSeconds(ResourceBase[NextDialogTextIndex].TimeToLeave);
+            NextDialog();
         }
 
         private void FinishDialog()
         {
-            Time.timeScale = 1f;
+            if (Interactable)
+                Time.timeScale = 1f;
         }
     }
 }
