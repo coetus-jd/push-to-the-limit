@@ -109,5 +109,11 @@
             "PersonName": "Doutor",
             "TimeToLeave": 12
         }
+    ],
+    "YouLost": [
+        {
+            "Text": "Você é muito burro",
+            "PersonName": "Doutor"
+        }
     ]
 }

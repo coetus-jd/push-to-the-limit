@@ -77,6 +77,8 @@ public class PlayerControl : MonoBehaviour
 
         }
         else
+
+        
         {
             if(acceleration >0)
             {
