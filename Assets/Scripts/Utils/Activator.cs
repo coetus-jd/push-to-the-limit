@@ -6,7 +6,7 @@ namespace TimeRace.Scripts.Utilities
     public class Activator : MonoBehaviour
     {
         /// <summary>
-        /// Objects to activate when another object enter the area
+        /// Objects to activate when another object enter in the area
         /// </summary>
         [SerializeField]
         private List<GameObject> objectsToActivate;

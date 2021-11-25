@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerControl : MonoBehaviour
 {
+    public float Life { get; private set; } = 100;
+
     [Header("Physics")]
     [SerializeField]
     private Collider Col;
