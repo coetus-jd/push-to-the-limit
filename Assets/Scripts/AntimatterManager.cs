@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace TimeRace.Scripts
 {
@@ -26,7 +27,6 @@ namespace TimeRace.Scripts
         /// <summary>
         /// A partir de quantas antimatérias deverá ser mostrado a mensagem ao jogador
         /// </summary>
-        [SerializeField]
         private int CountToShowMessage;
 
         /// <summary>
@@ -34,11 +34,22 @@ namespace TimeRace.Scripts
         /// </summary>
         [SerializeField]
         private TextMeshProUGUI Text;
+        
+        /// <summary>
+        /// A imagem do combustível sendo preenchido
+        /// </summary>
+        [SerializeField]
+        private Image Fuel;
 
         /// <summary>
         /// Controla se o diálogo de mensagem já foi aberto
         /// </summary>
         private bool DialogOpened;
+
+        void Start()
+        {
+            CountToShowMessage = CountToNextPhase / 2;
+        }
 
         void Update()
         {
@@ -71,6 +82,7 @@ namespace TimeRace.Scripts
         private void DisplayCount()
         {
             Text.text = Count.ToString();
+            Fuel.fillAmount = (float)Count / CountToNextPhase;
         }
     }
 }
