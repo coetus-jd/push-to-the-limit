@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
@@ -30,6 +31,24 @@ namespace TimeRace.Scripts
         private TextMeshProUGUI Text;
 
         /// <summary>
+        /// Todos os gameobjects que devem ser desabilitados ao executar esse diálogo
+        /// </summary>
+        [SerializeField]
+        private List<GameObject> UiElementsToDisable;
+        
+        /// <summary>
+        /// Diálogo com as falas finais quando o jogador perde
+        /// </summary>
+        [SerializeField]
+        private GameObject LostDialog;
+
+        /// <summary>
+        /// UI com a mensagem de que o jogador perdeu
+        /// </summary>
+        [SerializeField]
+        private GameObject LostPanel;
+
+        /// <summary>
         /// Controla se o timer está rodando
         /// </summary>
         private bool TimerIsRunning;
@@ -60,6 +79,15 @@ namespace TimeRace.Scripts
 
             TimeRemaining = 0;
             TimerIsRunning = false;
+            Lost();
+        }
+
+        private void Lost()
+        {
+            UiElementsToDisable.ForEach(ui => ui.SetActive(false));
+
+            LostPanel.SetActive(true);
+            LostDialog.SetActive(true);
         }
 
         private void OpenDialogWarning()

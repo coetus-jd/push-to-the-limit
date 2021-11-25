@@ -102,18 +102,34 @@
         {
             "Text": "E aí doutor? Sei pilotar bem um avião ou não?",
             "PersonName": "Aprendiz",
-            "TimeToLeave": 10
+            "TimeToLeave": 6
         },
         {
             "Text": "Técnicamente é um Ecranoplano, mas está indo bem, porém foque no que precisa fazer!",
             "PersonName": "Doutor",
-            "TimeToLeave": 12
+            "TimeToLeave": 10
         }
     ],
-    "YouLost": [
+    "Lost": [
         {
-            "Text": "Você é muito burro",
+            "Text": "Olha a merda que você fez, eu avisei!!!",
             "PersonName": "Doutor"
+        },
+        {
+            "Text": "Eu tentei o máximo que pude",
+            "PersonName": "Aprendiz"
+        },
+        {
+            "Text": "Agora você ficará preso nesse tempo pelo resto da eternidade",
+            "PersonName": "Doutor"
+        },
+        {
+            "Text": "Infelizmente não poderei te ajudar mais. Adeus!",
+            "PersonName": "Doutor"
+        },
+        {
+            "Text": "...",
+            "PersonName": "Aprendiz"
         }
     ]
 }
