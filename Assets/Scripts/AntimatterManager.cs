@@ -51,13 +51,6 @@ namespace TimeRace.Scripts
             CountToShowMessage = CountToNextPhase / 2;
         }
 
-        void Update()
-        {
-            //Código somente para testes, remover depois
-            if (Input.GetKeyDown(KeyCode.Space))
-                Add(1);
-        }
-
         public void Add(int quantity)
         {
             Count += quantity;
