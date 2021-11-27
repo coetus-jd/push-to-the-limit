@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody))]
+[RequireComponent(typeof(Collider))]
+[RequireComponent(typeof(SpriteRenderer))]
+[RequireComponent(typeof(Animator))]
 public class PlayerControl : MonoBehaviour
 {
     public float Life { get; private set; } = 100;
@@ -9,20 +13,25 @@ public class PlayerControl : MonoBehaviour
     [Header("Physics")]
     [SerializeField]
     private Collider Col;
+
     [SerializeField]
-    private Rigidbody rb;
+    private Rigidbody Rb;
 
     [Header("Velocity")]
     [SerializeField]
-    private float speed;
-    private float acceleration;
+    private float Speed;
+
+    private float Acceleration;
+
     [SerializeField]
     private float ReductionForce;
+
     [SerializeField]
     private float StopForce;
+
     [Space]
     [SerializeField]
-    private float rotateSpeed;
+    private float RotateSpeed;
 
     private float Vertical;
     private float Horizontal;
@@ -30,91 +39,69 @@ public class PlayerControl : MonoBehaviour
     [Header("Animation")]
     [SerializeField]
     private Animator Animator;
+
     [SerializeField]
     private SpriteRenderer SpriteRenderer;
 
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
+        Rb = GetComponent<Rigidbody>();
         Col = GetComponent<Collider>();
         SpriteRenderer = GetComponent<SpriteRenderer>();
         Animator = GetComponent<Animator>();
     }
 
-    void Update() 
+    void Update()
     {
         Vertical = Input.GetAxis("Vertical");
         Horizontal = Input.GetAxis("Horizontal");
-    }
 
-    void FixedUpdate() 
-    {
         Movement();
         Rotation();
     }
 
-    void Movement()
+    private void Movement()
     {
-
-        if(Vertical != 0)
+        if (Vertical != 0)
         {
-
-            if(Vertical > 0)
+            if (Vertical > 0)
             {
-                if (acceleration < 0)
-                    acceleration += speed * Time.deltaTime * ReductionForce;
+                if (Acceleration < 0)
+                    Acceleration += Speed * Time.deltaTime * ReductionForce;
                 else
-                    acceleration += speed * Time.deltaTime;
+                    Acceleration += Speed * Time.deltaTime;
             }
             else
             {
-                if (acceleration > 0)
-                    acceleration -= speed * Time.deltaTime * ReductionForce;
+                if (Acceleration > 0)
+                    Acceleration -= Speed * Time.deltaTime * ReductionForce;
                 else
-                    acceleration -= speed * Time.deltaTime;
-
+                    Acceleration -= Speed * Time.deltaTime;
             }
-            
-            rb.velocity = acceleration * transform.forward;
-
         }
         else
-
-        
         {
-            if(acceleration >0)
-            {
-                acceleration -= speed*Time.deltaTime*StopForce;
-            }
-            else if(acceleration<0)
-            {
-                acceleration += speed*Time.deltaTime*StopForce;
-            }
-
-            rb.velocity = acceleration * transform.forward;
-
+            if (Acceleration > 0)
+                Acceleration -= Speed * Time.deltaTime * StopForce;
+            else
+                Acceleration = 0;
         }
 
-        Animator.SetFloat("Acceleration", acceleration);
-
+        Rb.velocity = Acceleration * transform.forward;
+        Animator.SetFloat("Acceleration", Acceleration);
     }
 
-    void Rotation()
+    private void Rotation()
     {
-
         if (Horizontal != 0)
         {
-            rb.MoveRotation(rb.rotation * Quaternion.Euler(0,rotateSpeed * Horizontal* Time.deltaTime,0) );
+            Rb.MoveRotation(Rb.rotation * Quaternion.Euler(0, RotateSpeed * Horizontal * Time.deltaTime, 0));
             SpriteRenderer.flipX = Horizontal >= 0 ? false : true;
 
             Animator.SetBool("Curving", true);
+            return;
         }
 
-        else
-        {
-            Animator.SetBool("Curving", false);
-        }
-
+        Animator.SetBool("Curving", false);
     }
-
 }

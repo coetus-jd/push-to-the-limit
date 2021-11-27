@@ -745,11 +745,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Col: {fileID: 0}
-  rb: {fileID: 0}
-  speed: 3
-  ReductionForce: 1
-  StopForce: 100
-  rotateSpeed: 30
+  Rb: {fileID: 0}
+  Speed: 5
+  ReductionForce: 2
+  StopForce: 2
+  RotateSpeed: 50
   Animator: {fileID: 0}
   SpriteRenderer: {fileID: 0}
 --- !u!54 &183544865
