@@ -8,7 +8,7 @@ PhysicMaterial:
   m_PrefabAsset: {fileID: 0}
   m_Name: Barrier
   dynamicFriction: 0
-  staticFriction: 0.2
-  bounciness: 0.2
+  staticFriction: 1
+  bounciness: 1
   frictionCombine: 0
   bounceCombine: 0

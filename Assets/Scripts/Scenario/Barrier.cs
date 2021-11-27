@@ -14,7 +14,7 @@ namespace TimeRace.Scripts.Scenario
             if (!collision.gameObject.CompareTag("Player"))
                 return;
 
-            var player = collision.gameObject.GetComponent<Player>();
+            var player = collision.gameObject.GetComponent<PlayerControl>();
 
             player?.TakeDamage(Damage);
 

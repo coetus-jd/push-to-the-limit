@@ -60,6 +60,11 @@ public class PlayerControl : MonoBehaviour
         Rotation();
     }
 
+    public void TakeDamage(float damage)
+    {
+        Life -= damage;
+    }
+
     private void Movement()
     {
         if (Vertical != 0)
