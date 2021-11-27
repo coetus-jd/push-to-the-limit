@@ -84,6 +84,8 @@ namespace TimeRace.Scripts
 
         private void Lost()
         {
+            Time.timeScale = 0;
+
             UiElementsToDisable.ForEach(ui => ui.SetActive(false));
 
             LostPanel.SetActive(true);

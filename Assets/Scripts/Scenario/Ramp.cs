@@ -14,6 +14,8 @@ namespace TimeRace.Scripts.Scenario
             if (!other.gameObject.CompareTag("Player"))
                 return;
 
+            Debug.Log($"{other.gameObject.name} colidiu");
+
             var playerRb = other.gameObject.GetComponent<Rigidbody>();
             
             playerRb?.AddForce(
