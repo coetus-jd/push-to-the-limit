@@ -36,7 +36,7 @@ This project is a simple 2D platform game where you control a slave in search of
  - [Alberto Luigi Venciguerra](https://www.instagram.com/alvenciguerra/) - Graphic Design, Level Design
  - [Bruno Ganade Alves ](https://github.com/Ganade) - UI/UX, SFX, OST
  - [Fabrício Pinto Ferreira](https://github.com/pferreirafabricio) - Coding and testing
- - [Gabriel Henrique Mantovani De Oliveira]() - Screenplay
+ - [Gabriel Henrique Mantovani De Oliveira](https://github.com/MantovaniGabriel) - Screenplay
  - [João Frederico Kraft Cuppi](https://github.com/JoaoFKraft) - UI/UX, Level Design
  - [Leonardo Rezende Nakashima](https://github.com/waterwhirl) - Coding and testing
 
