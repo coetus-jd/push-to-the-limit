@@ -2,7 +2,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace TimeRace.Scripts
+namespace TimeRace.Scripts.Managers
 {
     public class AntimatterManager : MonoBehaviour
     {
@@ -28,12 +28,6 @@ namespace TimeRace.Scripts
         /// A partir de quantas antimatérias deverá ser mostrado a mensagem ao jogador
         /// </summary>
         private int CountToShowMessage;
-
-        /// <summary>
-        /// Componente aonde será exibido a contagem de antimatéria
-        /// </summary>
-        [SerializeField]
-        private TextMeshProUGUI Text;
         
         /// <summary>
         /// A imagem do combustível sendo preenchido
@@ -51,6 +45,13 @@ namespace TimeRace.Scripts
             CountToShowMessage = CountToNextPhase / 2;
         }
 
+        void Update()
+        {
+            // Atalho somente para fins de apresentação, remover posteriormente
+            if (Input.GetKey(KeyCode.L) && Input.GetKey(KeyCode.LeftShift))
+                GoToNextScene();
+        }
+
         public void Add(int quantity)
         {
             Count += quantity;
@@ -58,7 +59,7 @@ namespace TimeRace.Scripts
 
             if (Count >= CountToNextPhase)
             {
-                Debug.Log("Lógica para mudar de fase");
+                GoToNextScene();
                 return;
             }
 
@@ -74,8 +75,12 @@ namespace TimeRace.Scripts
 
         private void DisplayCount()
         {
-            Text.text = Count.ToString();
             Fuel.fillAmount = (float)Count / CountToNextPhase;
+        }
+
+        private void GoToNextScene()
+        {
+            GameManager.playScene("GamePhase2");
         }
     }
 }

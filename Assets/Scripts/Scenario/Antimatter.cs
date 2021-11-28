@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TimeRace.Scripts.Managers;
 using UnityEngine;
 
 namespace TimeRace.Scripts.Scenario

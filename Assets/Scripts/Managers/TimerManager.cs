@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-namespace TimeRace.Scripts
+namespace TimeRace.Scripts.Managers
 {
     public class TimerManager : MonoBehaviour
     {
