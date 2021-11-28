@@ -80,7 +80,7 @@ namespace TimeRace.Scripts.Managers
 
         private void GoToNextScene()
         {
-            GameManager.playScene("GamePhase2");
+            SceneLoadManager.Instance.PlaySceneWithLoading("GamePhase2");
         }
     }
 }

@@ -31,12 +31,39 @@ namespace TimeRace.Scripts.Managers
             Destroy(gameObject);
         }
 
-        public async void LoadScene(string sceneName)
+        /// <summary>
+        /// Carrega uma Scene por seu caminho
+        /// </summary>
+        /// <param name="sceneName"></param>
+        public static void PlayScene(string sceneName)
+        {
+            SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
+        }
+
+        /// <summary>
+        /// Carrega uma Scene por seu caminho
+        /// </summary>
+        /// <param name="sceneName"></param>
+        public static void PlayScene(string sceneName, LoadSceneMode sceneMode = LoadSceneMode.Single)
+        {
+            SceneManager.LoadScene(sceneName, sceneMode);
+        }
+
+        /// <summary>
+        /// Carrega uma Scene por seu index
+        /// </summary>
+        /// <param name="sceneIndex"></param>
+        public static void PlayScene(int sceneIndex, LoadSceneMode sceneMode = LoadSceneMode.Single)
+        {
+            SceneManager.LoadScene(sceneIndex, sceneMode);
+        }
+
+        public async void PlaySceneWithLoading(string sceneName)
         {
             if (Background == null)
                 return;
 
-            TargetAlpha = 0;
+            // TargetAlpha = 0;
             Background.color = new Color(Color.r, Color.g, Color.b, 0);
 
             var newScene = SceneManager.LoadSceneAsync(sceneName);
@@ -44,7 +71,7 @@ namespace TimeRace.Scripts.Managers
 
             Background.enabled = true;
             var fakeTimer = 10f;
-            
+
             do
             {
                 await Task.Delay(100);
