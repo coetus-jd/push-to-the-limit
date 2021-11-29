@@ -32,6 +32,9 @@ public class PlayerControl : MonoBehaviour
     [Space]
     [SerializeField]
     private float RotateSpeed;
+    private float rotate;
+    [SerializeField]
+    private float parallax;
 
     private float Vertical;
     private float Horizontal;
@@ -42,6 +45,10 @@ public class PlayerControl : MonoBehaviour
 
     [SerializeField]
     private SpriteRenderer SpriteRenderer;
+
+    [Header("Parallax")]
+    [SerializeField]
+    private MeshRenderer mr;
 
     void Start()
     {
@@ -83,6 +90,7 @@ public class PlayerControl : MonoBehaviour
                 else
                     Acceleration -= Speed * Time.deltaTime;
             }
+            Rb.velocity = Acceleration * transform.forward;
         }
         else
         {
@@ -90,23 +98,32 @@ public class PlayerControl : MonoBehaviour
                 Acceleration -= Speed * Time.deltaTime * StopForce;
             else
                 Acceleration = 0;
+            
         }
 
-        Rb.velocity = Acceleration * transform.forward;
+        
         Animator.SetFloat("Acceleration", Acceleration);
     }
 
     private void Rotation()
     {
+
         if (Horizontal != 0)
         {
-            Rb.MoveRotation(Rb.rotation * Quaternion.Euler(0, RotateSpeed * Horizontal * Time.deltaTime, 0));
+            
+            transform.Rotate(0,RotateSpeed * Horizontal * Time.deltaTime,0);
             SpriteRenderer.flipX = Horizontal >= 0 ? false : true;
+            
+            rotate = transform.localEulerAngles.y / 360;
+
+            mr.material.mainTextureOffset = new Vector2 (rotate,0);
+
 
             Animator.SetBool("Curving", true);
             return;
         }
 
+        
         Animator.SetBool("Curving", false);
     }
 }
