@@ -19,8 +19,7 @@ namespace TimeRace.Scripts.Scenario
             var playerRb = other.gameObject.GetComponent<Rigidbody>();
             
             playerRb?.AddForce(
-                new Vector3(0, Force, 0),
-                ForceMode.Impulse
+                Vector3.up * Force * Time.fixedDeltaTime, ForceMode.VelocityChange
             );
         }
     }
