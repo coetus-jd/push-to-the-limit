@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -28,7 +29,7 @@ namespace TimeRace.Scripts.Managers
         /// A partir de quantas antimatérias deverá ser mostrado a mensagem ao jogador
         /// </summary>
         private int CountToShowMessage;
-        
+
         /// <summary>
         /// A imagem do combustível sendo preenchido
         /// </summary>
@@ -36,13 +37,37 @@ namespace TimeRace.Scripts.Managers
         private Image Fuel;
 
         /// <summary>
+        /// Áudio que será tocado ao terminar a última fase
+        /// </summary>
+        private AudioSource WinAudio;
+
+        /// <summary>
+        /// UI com a mensagem de que o jogador ganhou
+        /// </summary>
+        [SerializeField]
+        private GameObject WinPanel;
+
+        /// <summary>
+        /// Indica se é a fase final ou não
+        /// </summary>
+        [SerializeField]
+        private bool FinalPhase;
+
+        /// <summary>
         /// Controla se o diálogo de mensagem já foi aberto
         /// </summary>
         private bool DialogOpened;
 
+        /// <summary>
+        /// Todos os gameobjects que devem ser desabilitados ao ganhar
+        /// </summary>
+        [SerializeField]
+        private List<GameObject> UiElementsToDisable;
+
         void Start()
         {
             CountToShowMessage = CountToNextPhase / 2;
+            WinAudio = GetComponent<AudioSource>();
         }
 
         void Update()
@@ -73,6 +98,16 @@ namespace TimeRace.Scripts.Managers
             }
         }
 
+        private void Win()
+        {
+            Time.timeScale = 0;
+            WinPanel.SetActive(true);
+
+            UiElementsToDisable.ForEach(ui => ui.SetActive(false));
+
+            WinAudio.Play();
+        }
+
         private void DisplayCount()
         {
             Fuel.fillAmount = (float)Count / CountToNextPhase;
@@ -80,6 +115,12 @@ namespace TimeRace.Scripts.Managers
 
         private void GoToNextScene()
         {
+            if (FinalPhase)
+            {
+                Win();
+                return;
+            }
+
             SceneLoadManager.Instance.PlaySceneWithLoading("GamePhase2");
         }
     }

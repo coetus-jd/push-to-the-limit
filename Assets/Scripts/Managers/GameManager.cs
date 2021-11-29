@@ -8,6 +8,9 @@ namespace TimeRace.Scripts.Managers
         [SerializeField]
         private GameObject PausePanel;
 
+        [SerializeField]
+        private GameObject BackgroundSound;
+
         /// <summary>
         /// Fecha a aplicação do jogo
         /// </summary>
@@ -22,6 +25,10 @@ namespace TimeRace.Scripts.Managers
         {
             if (Input.GetKeyDown(KeyCode.Escape))
                 TogglePauseGame();
+
+            // Atalho somente para fins de apresentação, remover posteriormente
+            if (Input.GetKey(KeyCode.LeftShift) && Input.GetKey(KeyCode.B))
+                BackgroundSound.SetActive(!BackgroundSound.activeSelf);
         }
 
         public void TogglePauseGame()
