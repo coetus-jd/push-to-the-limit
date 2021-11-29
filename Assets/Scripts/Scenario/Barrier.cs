@@ -5,7 +5,10 @@ using UnityEngine;
 namespace TimeRace.Scripts.Scenario
 {
     public class Barrier : MonoBehaviour
-    {
+    {   
+        [SerializeField]
+        private ParticleSystem Particle;
+
         [SerializeField]
         private float Damage = 1f;
 
@@ -17,6 +20,7 @@ namespace TimeRace.Scripts.Scenario
             var player = collision.gameObject.GetComponent<PlayerControl>();
 
             player?.TakeDamage(Damage);
+            Particle.Play();
 
             var playerRb = player.GetComponent<Rigidbody>();
             
