@@ -33,8 +33,6 @@ public class PlayerControl : MonoBehaviour
     [SerializeField]
     private float RotateSpeed;
     private float rotate;
-    [SerializeField]
-    private float parallax;
 
     private float Vertical;
     private float Horizontal;
@@ -49,6 +47,15 @@ public class PlayerControl : MonoBehaviour
     [Header("Parallax")]
     [SerializeField]
     private MeshRenderer mr;
+    [Header("Check")]
+    [SerializeField]
+    private LayerMask groundLayer;
+    [SerializeField]
+    private float groundDistance = 0.1f; 
+    [SerializeField]
+    private Transform Feet;
+    private bool ground;
+
 
     void Start()
     {
@@ -62,7 +69,7 @@ public class PlayerControl : MonoBehaviour
     {
         Vertical = Input.GetAxis("Vertical");
         Horizontal = Input.GetAxis("Horizontal");
-
+        ground = !Physics.CheckSphere(Feet.position, groundDistance, groundLayer,QueryTriggerInteraction.Ignore);
         Movement();
         Rotation();
     }
@@ -74,7 +81,7 @@ public class PlayerControl : MonoBehaviour
 
     private void Movement()
     {
-        if (Vertical != 0)
+        if (Vertical != 0 && ground == false)
         {
             if (Vertical > 0)
             {
@@ -92,12 +99,16 @@ public class PlayerControl : MonoBehaviour
             }
             Rb.velocity = Acceleration * transform.forward;
         }
-        else
+        else if (Vertical == 0 && ground == false)
         {
             if (Acceleration > 0)
                 Acceleration -= Speed * Time.deltaTime * StopForce;
             else
                 Acceleration = 0;
+            
+        }
+        else
+        {
             
         }
 
@@ -111,7 +122,7 @@ public class PlayerControl : MonoBehaviour
         if (Horizontal != 0)
         {
             
-            transform.Rotate(0,RotateSpeed * Horizontal * Time.deltaTime,0);
+            Rb.MoveRotation(Rb.rotation * Quaternion.Euler(0,RotateSpeed * Horizontal * Time.deltaTime,0));
             SpriteRenderer.flipX = Horizontal >= 0 ? false : true;
             
             rotate = transform.localEulerAngles.y / 360;
