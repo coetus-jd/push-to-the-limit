@@ -105,6 +105,8 @@ public class PlayerControl : MonoBehaviour
                 Acceleration -= Speed * Time.deltaTime * StopForce;
             else
                 Acceleration = 0;
+
+            Rb.velocity = Acceleration * transform.forward;
             
         }
         else
