@@ -17,10 +17,12 @@ namespace TimeRace.Scripts.Scenario
             Debug.Log($"{other.gameObject.name} colidiu");
 
             var playerRb = other.gameObject.GetComponent<Rigidbody>();
+
             
             playerRb?.AddForce(
-                Vector3.up * Force * Time.fixedDeltaTime, ForceMode.VelocityChange
+                transform.up * Force * Time.fixedDeltaTime, ForceMode.Impulse
             );
+            
         }
     }
 }
