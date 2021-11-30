@@ -20,7 +20,7 @@ namespace TimeRace.Scripts.Scenario
 
             Rounds++;
 
-            if (Rounds == 1 && pPlayer.Life == 100)
+            if (Rounds == 2 && pPlayer.Life == 100)
                 TurnWithoutHitDialog.SetActive(true);
         }
     }

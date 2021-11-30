@@ -53,5 +53,6 @@ namespace TimeRace.Resources
         public string Text;
         public string PersonName;
         public int TimeToLeave;
+        public string AnimationName;
     }
 }

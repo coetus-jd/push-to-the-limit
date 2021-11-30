@@ -94,6 +94,8 @@ namespace TimeRace.UI.Dialog
         public void NextDialog()
         {
             CurrentDialog.SetActive(false);
+            CurrentDialog.GetComponentInChildren<Animator>()
+                ?.SetBool(ResourceBase[NextDialogTextIndex].AnimationName, false);
 
             if (IsLastIndex)
             {
@@ -116,6 +118,11 @@ namespace TimeRace.UI.Dialog
                 .Last()
                 .text = ResourceBase[NextDialogTextIndex].Text;
             PastPersonName = ResourceBase[NextDialogTextIndex].PersonName;
+
+            Debug.Log($"{PastPersonName} Animation name: {ResourceBase[NextDialogTextIndex].AnimationName}");
+
+            CurrentDialog.GetComponentInChildren<Animator>()
+                ?.SetBool(ResourceBase[NextDialogTextIndex].AnimationName, true);
 
             if (ResourceBase[NextDialogTextIndex].TimeToLeave > 0)
                 StartCoroutine(WaitDialogFinish());

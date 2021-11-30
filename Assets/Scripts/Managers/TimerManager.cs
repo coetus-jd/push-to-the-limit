@@ -65,6 +65,10 @@ namespace TimeRace.Scripts.Managers
 
         void Update()
         {
+            // Atalho somente para fins de apresentação, remover posteriormente
+            if (Input.GetKey(KeyCode.P) && Input.GetKey(KeyCode.LeftShift))
+                Lost();
+
             if (!TimerIsRunning)
                 return;
 
@@ -85,7 +89,7 @@ namespace TimeRace.Scripts.Managers
         private void Lost()
         {
             Time.timeScale = 0;
-
+            
             UiElementsToDisable.ForEach(ui => ui.SetActive(false));
 
             LostPanel.SetActive(true);
