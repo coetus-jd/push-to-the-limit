@@ -1,135 +1,152 @@
 {
-    "Introduction": [
-        {
+    "Introduction": [{
             "Text": "Você tem noção da merda que fez?! A máquina do tempo ainda não é totalmente segura... o que tinha na cabeça?",
-            "PersonName": "Doutor"
+            "PersonName": "Doutor",
+            "AnimationName": "Serious"
         },
         {
             "Text": "Eu só queria fazer alguns investimentos de sucesso no passado e ser rico no futuro!",
-            "PersonName": "Aprendiz"
+            "PersonName": "Aprendiz",
+            "AnimationName": "Worried"
         },
         {
             "Text": "[suspiro] Ahhh! Não seria tão simples assim... se mantenha na pista e não bata nas laterais, você precisa sair daí o mais rápido possível, então pegue as esferas de antimatéria E CORRA!",
-            "PersonName": "Doutor"
+            "PersonName": "Doutor",
+            "AnimationName": "Serious"
         }
     ],
-    "Explication": [
-        {
+    "Explication": [{
             "Text": "Por quê seu desespero sobre eu estar aqui?",
-            "PersonName": "Aprendiz"
+            "PersonName": "Aprendiz",
+            "AnimationName": "Joy"
         },
         {
             "Text": "Entenda que ao viajar no tempo você tá bagunçando tudo, em tese, não podemos viajar no tempo",
-            "PersonName": "Doutor"
+            "PersonName": "Doutor",
+            "AnimationName": "Joy"
         },
         {
             "Text": "Além do mais, a antimatéria é instável, precisa pegá-la a tempo antes que desapareça e fique preso aí!",
-            "PersonName": "Doutor"
+            "PersonName": "Doutor",
+            "AnimationName": "Joy"
         },
         {
             "Text": "Que lugar é esse doutor?",
-            "PersonName": "Aprendiz"
+            "PersonName": "Aprendiz",
+            "AnimationName": "Joy"
         },
         {
             "Text": "Um lugar no extremo passado, quando a terra ainda estava se formando.",
-            "PersonName": "Doutor"
+            "PersonName": "Doutor",
+            "AnimationName": "Joy"
         },
         {
             "Text": "E como essa pista veio parar aqui?",
-            "PersonName": "Aprendiz"
+            "PersonName": "Aprendiz",
+            "AnimationName": "Joy"
         },
         {
             "Text": "É um experimento antigo meu...",
-            "PersonName": "Doutor"
+            "PersonName": "Doutor",
+            "AnimationName": "Joy"
         },
         {
             "Text": "Estava testando a máquina e ela abriu uma fenda dimensional que levou a pista de testes a sua volta para algum momento no tempo onde houvesse mais antimatéria, ao invés de mandar ela mesma",
-            "PersonName": "Doutor"
+            "PersonName": "Doutor",
+            "AnimationName": "Joy"
         },
         {
             "Text": "Isso aconteceu algumas vezes...",
-            "PersonName": "Doutor"
+            "PersonName": "Doutor",
+            "AnimationName": "Joy"
         },
         {
             "Text": "Isso significa que ela está funcionando agora, certo?",
-            "PersonName": "Aprendiz"
+            "PersonName": "Aprendiz",
+            "AnimationName": "Joy"
         },
         {
             "Text": "Aparentemente sim. Mas não sei se está devidamente calibrada para ir ao futuro, cuidado!",
-            "PersonName": "Doutor"
-        }
-    ],
-    "FullAntimatter": [
-        {
-            "Text": "Você está quase lá o medidor de combústivel está quase cheio!",
             "PersonName": "Doutor",
-            "TimeToLeave": 10
+            "AnimationName": "Serious"
         }
     ],
-    "RunningOutOfTime": [
-        {
-            "Text": "Anda logo garoto! O tempo está acabando! A antimatéria logo vai sumir!",
-            "PersonName": "Doutor",
-            "TimeToLeave": 10
-        }
-    ],
-    "HitBorderTwice": [
-        {
-            "Text": "Cuidado garoto! Você não é indestrútivel!",
-            "PersonName": "Doutor",
-            "TimeToLeave": 10
-        }
-    ],
-    "ToTheFuture": [
-        {
+    "FullAntimatter": [{
+        "Text": "Você está quase lá o medidor de combústivel está quase cheio!",
+        "PersonName": "Doutor",
+        "AnimationName": "Joy",
+        "TimeToLeave": 10
+    }],
+    "RunningOutOfTime": [{
+        "Text": "Anda logo garoto! O tempo está acabando! A antimatéria logo vai sumir!",
+        "PersonName": "Doutor",
+        "AnimationName": "Worried",
+        "TimeToLeave": 10
+    }],
+    "HitBorderTwice": [{
+        "Text": "Cuidado garoto! Você não é indestrútivel!",
+        "PersonName": "Doutor",
+        "AnimationName": "Worried",
+        "TimeToLeave": 10
+    }],
+    "ToTheFuture": [{
             "Text": "Ué! Esse não é o nosso tempo!",
-            "PersonName": "Aprendiz"
+            "PersonName": "Aprendiz",
+            "AnimationName": "Worried"
         },
         {
             "Text": "Avançamos demais! Eu disse que essa coisa estava descalibrada!",
-            "PersonName": "Doutor"
+            "PersonName": "Doutor",
+            "AnimationName": "Worried"
         },
         {
             "Text": "E agora?",
-            "PersonName": "Aprendiz"
+            "PersonName": "Aprendiz",
+            "AnimationName": "Worried"
         },
         {
             "Text": "Pegue o combustível, vou tentar reprogramar o código de capacitação de fluxo temporal, aguenta aí!",
-            "PersonName": "Doutor"
+            "PersonName": "Doutor",
+            "AnimationName": "Worried"
         }
     ],
-    "TurnWithoutHit": [
-        {
+    "TurnWithoutHit": [{
             "Text": "E aí doutor? Sei pilotar bem um avião ou não?",
             "PersonName": "Aprendiz",
+            "AnimationName": "Joy",
             "TimeToLeave": 6
         },
         {
             "Text": "Técnicamente é um Ecranoplano, mas está indo bem, porém foque no que precisa fazer!",
             "PersonName": "Doutor",
+            "AnimationName": "Serious",
             "TimeToLeave": 10
         }
     ],
-    "Lost": [
-        {
+    "Lost": [{
             "Text": "Olha a merda que você fez, eu avisei!!!",
-            "PersonName": "Doutor"
+            "PersonName": "Doutor",
+            "AnimationName": "Serious"
         },
         {
             "Text": "Eu tentei o máximo que pude",
-            "PersonName": "Aprendiz"
+            "PersonName": "Aprendiz",
+            "AnimationName": "Worried"
         },
         {
             "Text": "Agora você ficará preso nesse tempo pelo resto da eternidade",
-            "PersonName": "Doutor"
+            "PersonName": "Doutor",
+            "AnimationName": "Worried"
         },
         {
             "Text": "Infelizmente não poderei te ajudar mais. Adeus!",
-            "PersonName": "Doutor"
+            "PersonName": "Doutor",
+            "AnimationName": "Worried"
         },
         {
             "Text": "...",
-            "PersonName": "Aprendiz"
+            "PersonName": "Aprendiz",
+            "AnimationName": "Worried"
         }
     ]
 }
