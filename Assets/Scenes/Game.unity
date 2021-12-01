@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.35040626, g: 0.014179068, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.3500302, g: 0.014190186, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1726,7 +1726,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FullAntimatterDialog: {fileID: 1162935648}
   Count: 0
-  CountToNextPhase: 50
+  CountToNextPhase: 40
   Fuel: {fileID: 426534224}
   WinPanel: {fileID: 69374156}
   FinalPhase: 0
@@ -4058,8 +4058,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RunningOutOfTimeDialog: {fileID: 1656377230}
-  TimeRemaining: 180
-  TimeToShowWarning: 60
+  TimeRemaining: 240
+  TimeToShowWarning: 90
   Text: {fileID: 138793744}
   UiElementsToDisable:
   - {fileID: 143516334}
@@ -7936,6 +7936,14 @@ PrefabInstance:
       propertyPath: Dano
       value: 
       objectReference: {fileID: 963724990}
+    - target: {fileID: 6480367128386160346, guid: 7a60e456c4618ce4abae305feda22003, type: 3}
+      propertyPath: HealthBar
+      value: 
+      objectReference: {fileID: 438272125}
+    - target: {fileID: 6480367128386160346, guid: 7a60e456c4618ce4abae305feda22003, type: 3}
+      propertyPath: HealthBarObject
+      value: 
+      objectReference: {fileID: 2088741792}
     - target: {fileID: 6480367128386160347, guid: 7a60e456c4618ce4abae305feda22003, type: 3}
       propertyPath: m_Constraints
       value: 112
