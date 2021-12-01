@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.35040626, g: 0.014179068, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.3500302, g: 0.014190186, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1533,54 +1533,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &484088548 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1411934273320744902, guid: 8950afcbd10261844a68b599b23938a8, type: 3}
-  m_PrefabInstance: {fileID: 1107555473}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &484088550
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 484088548}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 01a3a08a123ce4d40a9d4d69f0e0a4a1, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 2
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!1 &498646469 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7280605893112717305, guid: a1f256d1b55cfb04092716d6057b1f57, type: 3}
-  m_PrefabInstance: {fileID: 8439987426224707263}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &498646473
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 498646469}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 01a3a08a123ce4d40a9d4d69f0e0a4a1, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 2
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &509193762
 GameObject:
   m_ObjectHideFlags: 0
@@ -1769,7 +1721,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FullAntimatterDialog: {fileID: 1162935648}
   Count: 0
-  CountToNextPhase: 50
+  CountToNextPhase: 40
   Fuel: {fileID: 426534224}
   WinPanel: {fileID: 69374156}
   FinalPhase: 0
@@ -1777,6 +1729,7 @@ MonoBehaviour:
   - {fileID: 138793742}
   - {fileID: 143516334}
   - {fileID: 1162935648}
+  - {fileID: 1767911909}
 --- !u!82 &599306572
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3258,6 +3211,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ApprenticeDialog
       objectReference: {fileID: 0}
+    - target: {fileID: 1411934274278834947, guid: 8950afcbd10261844a68b599b23938a8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1411934274278834948, guid: 8950afcbd10261844a68b599b23938a8, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -3980,8 +3937,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RunningOutOfTimeDialog: {fileID: 1656377230}
-  TimeRemaining: 180
-  TimeToShowWarning: 60
+  TimeRemaining: 240
+  TimeToShowWarning: 90
   Text: {fileID: 138793744}
   UiElementsToDisable:
   - {fileID: 143516334}
@@ -7857,7 +7814,19 @@ PrefabInstance:
     - target: {fileID: 6480367128386160346, guid: 7a60e456c4618ce4abae305feda22003, type: 3}
       propertyPath: HealthBarObject
       value: 
+      objectReference: {fileID: 963724990}
+    - target: {fileID: 6480367128386160346, guid: 7a60e456c4618ce4abae305feda22003, type: 3}
+      propertyPath: HealthBar
+      value: 
+      objectReference: {fileID: 438272125}
+    - target: {fileID: 6480367128386160346, guid: 7a60e456c4618ce4abae305feda22003, type: 3}
+      propertyPath: HealthBarObject
+      value: 
       objectReference: {fileID: 2088741792}
+    - target: {fileID: 6480367128386160347, guid: 7a60e456c4618ce4abae305feda22003, type: 3}
+      propertyPath: m_Constraints
+      value: 112
+      objectReference: {fileID: 0}
     - target: {fileID: 6480367128386160352, guid: 7a60e456c4618ce4abae305feda22003, type: 3}
       propertyPath: m_Name
       value: Player
