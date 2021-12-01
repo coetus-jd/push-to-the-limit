@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.3500302, g: 0.014190186, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.35040626, g: 0.014179068, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2051,6 +2051,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 8.566, y: 0, z: 0}
+--- !u!1 &809652740 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8805457344407644938, guid: 4fbd81c1c26cc0945ba0e5d8aae69ad8, type: 3}
+  m_PrefabInstance: {fileID: 8805457345794336605}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &836163502
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4291,41 +4296,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7721470129467297061, guid: ff54b66e4c07e3945a3d139507c5ee04, type: 3}
-      propertyPath: m_Size.x
-      value: 1.0761503
-      objectReference: {fileID: 0}
-    - target: {fileID: 7721470129467297061, guid: ff54b66e4c07e3945a3d139507c5ee04, type: 3}
-      propertyPath: m_Size.z
-      value: 0.030024434
-      objectReference: {fileID: 0}
-    - target: {fileID: 7721470129467297061, guid: ff54b66e4c07e3945a3d139507c5ee04, type: 3}
-      propertyPath: m_Center.x
-      value: 0.3120761
-      objectReference: {fileID: 0}
-    - target: {fileID: 7721470129467297061, guid: ff54b66e4c07e3945a3d139507c5ee04, type: 3}
-      propertyPath: m_Center.y
-      value: 0.011766592
-      objectReference: {fileID: 0}
-    - target: {fileID: 7721470129467297061, guid: ff54b66e4c07e3945a3d139507c5ee04, type: 3}
-      propertyPath: m_Center.z
-      value: -0.06587219
-      objectReference: {fileID: 0}
-    - target: {fileID: 7721470129467297062, guid: ff54b66e4c07e3945a3d139507c5ee04, type: 3}
-      propertyPath: Damage
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 7721470129467297062, guid: ff54b66e4c07e3945a3d139507c5ee04, type: 3}
-      propertyPath: pushForce
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 7721470129467297083, guid: ff54b66e4c07e3945a3d139507c5ee04, type: 3}
       propertyPath: m_Name
       value: Barrier (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 7721470129467297083, guid: ff54b66e4c07e3945a3d139507c5ee04, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ff54b66e4c07e3945a3d139507c5ee04, type: 3}
@@ -7807,14 +7780,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1783429036}
     m_Modifications:
-    - target: {fileID: 6480367128386160346, guid: 7a60e456c4618ce4abae305feda22003, type: 3}
-      propertyPath: HealthBar
+    - target: {fileID: 963724994, guid: 7a60e456c4618ce4abae305feda22003, type: 3}
+      propertyPath: Die
       value: 
-      objectReference: {fileID: 2088741793}
-    - target: {fileID: 6480367128386160346, guid: 7a60e456c4618ce4abae305feda22003, type: 3}
-      propertyPath: HealthBarObject
+      objectReference: {fileID: 809652740}
+    - target: {fileID: 963724994, guid: 7a60e456c4618ce4abae305feda22003, type: 3}
+      propertyPath: lost
       value: 
-      objectReference: {fileID: 963724990}
+      objectReference: {fileID: 1474518614}
     - target: {fileID: 6480367128386160346, guid: 7a60e456c4618ce4abae305feda22003, type: 3}
       propertyPath: HealthBar
       value: 
@@ -7823,10 +7796,6 @@ PrefabInstance:
       propertyPath: HealthBarObject
       value: 
       objectReference: {fileID: 2088741792}
-    - target: {fileID: 6480367128386160347, guid: 7a60e456c4618ce4abae305feda22003, type: 3}
-      propertyPath: m_Constraints
-      value: 112
-      objectReference: {fileID: 0}
     - target: {fileID: 6480367128386160352, guid: 7a60e456c4618ce4abae305feda22003, type: 3}
       propertyPath: m_Name
       value: Player
