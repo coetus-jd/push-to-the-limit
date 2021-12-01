@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -11,6 +12,9 @@ namespace TimeRace.Scripts.Managers
         [SerializeField]
         private GameObject BackgroundSound;
 
+        [SerializeField]
+        private GameObject ExplicationDialog;
+
         /// <summary>
         /// Fecha a aplicação do jogo
         /// </summary>
@@ -19,6 +23,11 @@ namespace TimeRace.Scripts.Managers
         void Awake()
         {
             Time.timeScale = 1;
+        }
+
+        void Start()
+        {
+            StartCoroutine(ShowExplicationDialog());
         }
 
         void Update()
@@ -35,6 +44,12 @@ namespace TimeRace.Scripts.Managers
         {
             PausePanel.SetActive(!PausePanel.activeSelf);
             Time.timeScale = PausePanel.activeSelf ? 0 : 1;
+        }
+
+        private IEnumerator ShowExplicationDialog()
+        {
+            yield return new WaitForSeconds(15);
+            ExplicationDialog.SetActive(true);
         }
     }
 }

@@ -56,6 +56,12 @@ public class PlayerControl : MonoBehaviour
     private Transform Feet;
     private bool ground;
 
+    // [Header("Audio")]
+    // [SerializeField]
+    // private AudioSource EngineSound;
+
+    // [SerializeField]
+    // private AudioSource EngineJumpSound;
 
     void Start()
     {
@@ -109,11 +115,6 @@ public class PlayerControl : MonoBehaviour
             Rb.velocity = Acceleration * transform.forward;
             
         }
-        else
-        {
-            
-        }
-
         
         Animator.SetFloat("Acceleration", Acceleration);
     }

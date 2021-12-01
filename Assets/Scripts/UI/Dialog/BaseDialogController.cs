@@ -119,8 +119,6 @@ namespace TimeRace.UI.Dialog
                 .text = ResourceBase[NextDialogTextIndex].Text;
             PastPersonName = ResourceBase[NextDialogTextIndex].PersonName;
 
-            Debug.Log($"{PastPersonName} Animation name: {ResourceBase[NextDialogTextIndex].AnimationName}");
-
             CurrentDialog.GetComponentInChildren<Animator>()
                 ?.SetBool(ResourceBase[NextDialogTextIndex].AnimationName, true);
 

@@ -131,6 +131,7 @@ GameObject:
   - component: {fileID: 9196466535082283966}
   - component: {fileID: 9196466535082283964}
   - component: {fileID: 9196466535082283965}
+  - component: {fileID: 1025658625}
   m_Layer: 5
   m_Name: Photo
   m_TagString: Untagged
@@ -195,6 +196,25 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!95 &1025658625
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9196466535082283967}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 05079262278d5454b8d5f592810558aa, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 2
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &9196466535670274726
 GameObject:
   m_ObjectHideFlags: 0
