@@ -86,8 +86,11 @@ public class PlayerControl : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
-        Life -= damage;
-        UpdateHealthBar();
+        if (Life > 0)
+        {
+            Life -= damage;
+            UpdateHealthBar();
+        } 
     }
 
     void UpdateHealthBar()

@@ -105,7 +105,7 @@ namespace TimeRace.Scripts
         public void TakeDamage(float damage)
         {
             Life -= damage;
-            UpdateHealthBar();
+            UpdateHealthBar();           
         }
 
         void UpdateHealthBar()
