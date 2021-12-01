@@ -64,6 +64,9 @@ namespace TimeRace.Scripts.Managers
         [SerializeField]
         private List<GameObject> UiElementsToDisable;
 
+        [SerializeField]
+        private GameObject Audio;
+
         void Start()
         {
             CountToShowMessage = CountToNextPhase / 2;
@@ -118,6 +121,7 @@ namespace TimeRace.Scripts.Managers
             if (FinalPhase)
             {
                 Win();
+                Audio.SetActive(false);
                 return;
             }
 
