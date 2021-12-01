@@ -133,14 +133,14 @@ public class PlayerControl : MonoBehaviour
     {
         if (Vertical != 0 && ground == false)
         {
-            if (Vertical > 0)
+            if (Vertical > 0 && Acceleration <= 30)
             {
                 if (Acceleration < 0)
                     Acceleration += Speed * Time.deltaTime * ReductionForce;
                 else
                     Acceleration += Speed * Time.deltaTime;
             }
-            else
+            else if(Acceleration >=-30)
             {
                 if (Acceleration > 0)
                     Acceleration -= Speed * Time.deltaTime * ReductionForce;
