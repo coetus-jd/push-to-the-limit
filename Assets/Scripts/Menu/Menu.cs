@@ -46,9 +46,9 @@ public class Menu : MonoBehaviour
     {
         yield return new WaitForSeconds(1);
         //Editor Unity
-        UnityEditor.EditorApplication.isPlaying = false;
+        // UnityEditor.EditorApplication.isPlaying = false;
         //Jogo Compilado
-        //Application.Quit();
+        Application.Quit();
     }
 
     public void ShowOptions()
