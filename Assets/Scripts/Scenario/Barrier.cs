@@ -11,6 +11,8 @@ namespace TimeRace.Scripts.Scenario
 
         [SerializeField]
         private float Damage = 1f;
+        [SerializeField]
+        public float pushForce;
 
         void OnCollisionStay(Collision collision)
         {
@@ -23,13 +25,15 @@ namespace TimeRace.Scripts.Scenario
             Particle.Play();
 
             var playerRb = player.GetComponent<Rigidbody>();
+            var playerCont = player.GetComponent<PlayerControl>();
             
             if (playerRb == null || playerRb.velocity.z <= 0)
                 return;
             
+            playerCont.Acceleration -= 2 * Time.deltaTime;
             playerRb.AddForce(
-                new Vector3(0, 0, Time.deltaTime * -1),
-                ForceMode.Acceleration
+                new Vector3(0, 0, pushForce),
+                ForceMode.Impulse
             );
         }
     }

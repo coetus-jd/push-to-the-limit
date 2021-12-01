@@ -21,7 +21,7 @@ public class PlayerControl : MonoBehaviour
     [SerializeField]
     private float Speed;
 
-    private float Acceleration;
+    public float Acceleration;
 
     [SerializeField]
     private float ReductionForce;
@@ -128,7 +128,7 @@ public class PlayerControl : MonoBehaviour
         }
         else
         {
-            
+            Rb.velocity -=transform.up;
         }
 
         
