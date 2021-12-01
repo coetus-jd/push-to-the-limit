@@ -44,7 +44,8 @@ namespace TimeRace.Resources
         public List<ResourceBase> HitBorderTwice;
         public List<ResourceBase> ToTheFuture;
         public List<ResourceBase> TurnWithoutHit;
-        public List<ResourceBase> Lost;
+        public List<ResourceBase> LostTime;
+        public List<ResourceBase> Die;
     }
 
     [Serializable]

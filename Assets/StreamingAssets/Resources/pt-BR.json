@@ -18,57 +18,68 @@
     "Explication": [{
             "Text": "Por quê seu desespero sobre eu estar aqui?",
             "PersonName": "Aprendiz",
-            "AnimationName": "Joy"
+            "AnimationName": "Joy",
+            "TimeToLeave": 5
         },
         {
             "Text": "Entenda que ao viajar no tempo você tá bagunçando tudo, em tese, não podemos viajar no tempo",
             "PersonName": "Doutor",
-            "AnimationName": "Joy"
+            "AnimationName": "Joy",
+            "TimeToLeave": 10
         },
         {
             "Text": "Além do mais, a antimatéria é instável, precisa pegá-la a tempo antes que desapareça e fique preso aí!",
             "PersonName": "Doutor",
-            "AnimationName": "Joy"
+            "AnimationName": "Joy",
+            "TimeToLeave": 10
         },
         {
             "Text": "Que lugar é esse doutor?",
             "PersonName": "Aprendiz",
-            "AnimationName": "Joy"
+            "AnimationName": "Joy",
+            "TimeToLeave": 4
         },
         {
             "Text": "Um lugar no extremo passado, quando a terra ainda estava se formando.",
             "PersonName": "Doutor",
-            "AnimationName": "Joy"
+            "AnimationName": "Joy",
+            "TimeToLeave": 6
         },
         {
             "Text": "E como essa pista veio parar aqui?",
             "PersonName": "Aprendiz",
-            "AnimationName": "Joy"
+            "AnimationName": "Joy",
+            "TimeToLeave": 4
         },
         {
             "Text": "É um experimento antigo meu...",
             "PersonName": "Doutor",
-            "AnimationName": "Joy"
+            "AnimationName": "Joy",
+            "TimeToLeave": 4
         },
         {
             "Text": "Estava testando a máquina e ela abriu uma fenda dimensional que levou a pista de testes a sua volta para algum momento no tempo onde houvesse mais antimatéria, ao invés de mandar ela mesma",
             "PersonName": "Doutor",
-            "AnimationName": "Joy"
+            "AnimationName": "Joy",
+            "TimeToLeave": 10
         },
         {
             "Text": "Isso aconteceu algumas vezes...",
             "PersonName": "Doutor",
-            "AnimationName": "Joy"
+            "AnimationName": "Joy",
+            "TimeToLeave": 5
         },
         {
             "Text": "Isso significa que ela está funcionando agora, certo?",
             "PersonName": "Aprendiz",
-            "AnimationName": "Joy"
+            "AnimationName": "Joy",
+            "TimeToLeave": 6
         },
         {
             "Text": "Aparentemente sim. Mas não sei se está devidamente calibrada para ir ao futuro, cuidado!",
             "PersonName": "Doutor",
-            "AnimationName": "Serious"
+            "AnimationName": "Serious",
+            "TimeToLeave": 8
         }
     ],
     "FullAntimatter": [{
@@ -123,30 +134,14 @@
             "TimeToLeave": 10
         }
     ],
-    "Lost": [{
-            "Text": "Olha a merda que você fez, eu avisei!!!",
-            "PersonName": "Doutor",
-            "AnimationName": "Serious"
-        },
-        {
-            "Text": "Eu tentei o máximo que pude",
-            "PersonName": "Aprendiz",
-            "AnimationName": "Worried"
-        },
-        {
-            "Text": "Agora você ficará preso nesse tempo pelo resto da eternidade",
-            "PersonName": "Doutor",
-            "AnimationName": "Worried"
-        },
-        {
-            "Text": "Infelizmente não poderei te ajudar mais. Adeus!",
-            "PersonName": "Doutor",
-            "AnimationName": "Worried"
-        },
-        {
-            "Text": "...",
-            "PersonName": "Aprendiz",
-            "AnimationName": "Worried"
-        }
-    ]
+    "LostTime": [{
+        "Text": "Nããããooooo! Você demorou demais e as antimatérias se desfizeram!",
+        "PersonName": "Doutor",
+        "AnimationName": "Worried"
+    }],
+    "Die": [{
+        "Text": "Marco! Nããããoooo",
+        "PersonName": "Doutor",
+        "AnimationName": "Worried"
+    }]
 }
