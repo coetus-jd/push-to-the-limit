@@ -10,6 +10,7 @@ TagManager:
   - Dialog
   - DialogController
   - AntimatterManager
+  - Music
   layers:
   - Default
   - TransparentFX
