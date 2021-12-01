@@ -6,35 +6,37 @@ namespace TimeRace.Scripts.Scenario
 {
     public class Barrier : MonoBehaviour
     {   
-        [SerializeField]
-        private ParticleSystem Particle;
+
 
         [SerializeField]
         private float Damage = 1f;
         [SerializeField]
-        public float pushForce;
+        private float pushForce;
 
-        void OnCollisionStay(Collision collision)
+
+        void OnCollisionEnter(Collision other) {
+
+            var player = other.gameObject.GetComponent<PlayerControl>();
+            var playerRb = other.gameObject.GetComponent<Rigidbody>();
+
+        if (other.gameObject.CompareTag("Player"))
         {
-            if (!collision.gameObject.CompareTag("Player"))
-                return;
-
-            var player = collision.gameObject.GetComponent<PlayerControl>();
 
             player?.TakeDamage(Damage);
-            Particle.Play();
+            Debug.Log(player.transform.position);
 
-            var playerRb = player.GetComponent<Rigidbody>();
-            var playerCont = player.GetComponent<PlayerControl>();
+            if (player.Acceleration >0 && playerRb != null)
+            {
+
+                    playerRb.AddForce(transform.position * pushForce, ForceMode.Impulse);
+
+            }
+
             
-            if (playerRb == null || playerRb.velocity.z <= 0)
-                return;
-            
-            playerCont.Acceleration -= 2 * Time.deltaTime;
-            playerRb.AddForce(
-                new Vector3(0, 0, pushForce),
-                ForceMode.Impulse
-            );
         }
+
+        }
+
+
     }
 }
