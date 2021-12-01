@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.35040626, g: 0.014179068, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.3500302, g: 0.014190186, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -900,50 +900,13 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6480367128386160353, guid: 7a60e456c4618ce4abae305feda22003, type: 3}
   m_PrefabInstance: {fileID: 6480367128282393338}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 183544858}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.18785916
-  m_Height: 0.66249096
-  m_Direction: 0
-  m_Center: {x: 0.006176346, y: -0.27967536, z: 1.116801e-17}
---- !u!114 &183544864
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 183544858}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c112ab4f006b61d45ae71539a445f4d1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Col: {fileID: 0}
-  Rb: {fileID: 0}
-  Speed: 5
-  Acceleration: 0
-  ReductionForce: 2
-  StopForce: 2
-  RotateSpeed: 75
-  Animator: {fileID: 0}
-  SpriteRenderer: {fileID: 0}
-  mr: {fileID: 1212566788}
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 64
-  groundDistance: 0.1
-  Feet: {fileID: 154712545}
-  HealthBar: {fileID: 438272125}
-  HealthBarObject: {fileID: 2088741792}
 --- !u!54 &183544865
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 183544858}
+  m_GameObject: {fileID: 2045949995}
   serializedVersion: 2
   m_Mass: 4
   m_Drag: 0
@@ -1259,7 +1222,7 @@ Transform:
   - {fileID: 32351131}
   - {fileID: 118298497}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &343952822
 PrefabInstance:
@@ -1598,6 +1561,22 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!1 &509193762
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1135756894}
+  m_Layer: 0
+  m_Name: Recovery GameObject (1135756894)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1001 &532720179
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1996,7 +1975,7 @@ Transform:
   - {fileID: 1350735778}
   - {fileID: 1453935704}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &705507993
 GameObject:
@@ -2089,7 +2068,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 8.566, y: 0, z: 0}
 --- !u!1001 &836163502
 PrefabInstance:
@@ -2335,7 +2314,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &885243253
 GameObject:
@@ -3293,11 +3272,20 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1411934274278834947, guid: 8950afcbd10261844a68b599b23938a8, type: 3}
   m_PrefabInstance: {fileID: 1107555473}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1135756894 stripped
+--- !u!4 &1135756894
 Transform:
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 6877389681522284541, guid: b4e9a1f57908f404ca99f473ab94c56c, type: 3}
-  m_PrefabInstance: {fileID: 6877389682622124451}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 509193762}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1160228163
 GameObject:
   m_ObjectHideFlags: 0
@@ -5373,7 +5361,7 @@ RectTransform:
   - {fileID: 1862584788}
   - {fileID: 2088741793}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -5412,7 +5400,7 @@ Transform:
   - {fileID: 1172226492}
   - {fileID: 1863502322}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1803544010
 PrefabInstance:
@@ -6378,6 +6366,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7721470129467297060, guid: ff54b66e4c07e3945a3d139507c5ee04, type: 3}
   m_PrefabInstance: {fileID: 2038284797}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2045949995
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2045949996}
+  - component: {fileID: 183544865}
+  m_Layer: 0
+  m_Name: Recovery GameObject (183544865)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2045949996
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2045949995}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2083829886
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6498,7 +6517,7 @@ RectTransform:
   - {fileID: 438272125}
   - {fileID: 1160228164}
   m_Father: {fileID: 1768871659}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
