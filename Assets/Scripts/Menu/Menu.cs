@@ -39,11 +39,7 @@ public class Menu : MonoBehaviour
 
     public void QuitGame()
     {
-        StartCoroutine(ExitGame());
-        //Editor Unity
-        UnityEditor.EditorApplication.isPlaying = false;
-        //Jogo Compilado
-        //Application.Quit();
+        StartCoroutine(ExitGame());        
     }
 
     IEnumerator ExitGame()

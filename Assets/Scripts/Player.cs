@@ -41,11 +41,21 @@ namespace TimeRace.Scripts
 
         private SpriteRenderer SpriteRenderer;
 
+        [Header("Damage")]
+        [SerializeField]
+        public Transform HealthBar;         //Barra verde
+        [SerializeField]
+        public GameObject HealthBarObject;  // Objeto pai das barras
+        private Vector3 HealthBarScale;     //Tamanho da barra
+        private float HealthPercent;        //Pencentual de vida para o calculo do tamanho da barra
+
         void Start()
         {
             rb = GetComponent<Rigidbody>();
             SpriteRenderer = GetComponent<SpriteRenderer>();
             Animator = GetComponent<Animator>();
+            HealthBarScale = HealthBar.localScale;
+            HealthPercent = HealthBarScale.x / Life;
         }
 
         void Update()
@@ -91,10 +101,18 @@ namespace TimeRace.Scripts
             Animator.SetBool("Curving", true);
             transform.Rotate(0, 1 * horizontalMovement, 0, Space.Self);
         }
-
+        
         public void TakeDamage(float damage)
         {
             Life -= damage;
+            UpdateHealthBar();
         }
+
+        void UpdateHealthBar()
+        {
+            HealthBarScale.x = HealthPercent * Life;
+            HealthBar.localScale = HealthBarScale;
+        }
+
     }
 }

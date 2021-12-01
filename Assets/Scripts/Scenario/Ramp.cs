@@ -20,7 +20,7 @@ namespace TimeRace.Scripts.Scenario
 
             
             playerRb?.AddForce(
-                transform.up * Force * Time.fixedDeltaTime, ForceMode.Impulse
+                transform.up * Force, ForceMode.Impulse
             );
             
         }

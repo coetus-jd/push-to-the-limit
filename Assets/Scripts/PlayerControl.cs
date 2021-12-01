@@ -21,7 +21,7 @@ public class PlayerControl : MonoBehaviour
     [SerializeField]
     private float Speed;
 
-    private float Acceleration;
+    public float Acceleration;
 
     [SerializeField]
     private float ReductionForce;
@@ -62,6 +62,14 @@ public class PlayerControl : MonoBehaviour
 
     // [SerializeField]
     // private AudioSource EngineJumpSound;
+    [Header("Damage")]
+    [SerializeField]
+    public Transform HealthBar;         //Barra verde
+    [SerializeField]
+    public GameObject HealthBarObject;  // Objeto pai das barras
+    private Vector3 HealthBarScale;     //Tamanho da barra
+    private float HealthPercent;        //Pencentual de vida para o calculo do tamanho da barra
+
 
     void Start()
     {
@@ -69,6 +77,8 @@ public class PlayerControl : MonoBehaviour
         Col = GetComponent<Collider>();
         SpriteRenderer = GetComponent<SpriteRenderer>();
         Animator = GetComponent<Animator>();
+        HealthBarScale = HealthBar.localScale;
+        HealthPercent = HealthBarScale.x / Life;
     }
 
     void Update()
@@ -83,6 +93,13 @@ public class PlayerControl : MonoBehaviour
     public void TakeDamage(float damage)
     {
         Life -= damage;
+        UpdateHealthBar();
+    }
+
+    void UpdateHealthBar()
+    {
+        HealthBarScale.x = HealthPercent * Life;
+        HealthBar.localScale = HealthBarScale;
     }
 
     private void Movement()
@@ -115,6 +132,11 @@ public class PlayerControl : MonoBehaviour
             Rb.velocity = Acceleration * transform.forward;
             
         }
+        else
+        {
+            Rb.velocity -=transform.up;
+        }
+
         
         Animator.SetFloat("Acceleration", Acceleration);
     }
