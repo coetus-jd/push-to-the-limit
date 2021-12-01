@@ -57,7 +57,7 @@ public class PlayerControl : MonoBehaviour
     [SerializeField]
     private Transform Feet;
     private bool ground;
-
+  
     // [Header("Audio")]
     // [SerializeField]
     // private AudioSource EngineSound;
@@ -71,6 +71,11 @@ public class PlayerControl : MonoBehaviour
     public GameObject HealthBarObject;  // Objeto pai das barras
     private Vector3 HealthBarScale;     //Tamanho da barra
     private float HealthPercent;       //Pencentual de vida para o calculo do tamanho da barra
+    [SerializeField]
+    private Transform Dam;
+    [SerializeField]
+    private GameObject Dano;
+    private bool lastDamage = false;
 
 
     void Start()
@@ -88,19 +93,37 @@ public class PlayerControl : MonoBehaviour
         Vertical = Input.GetAxis("Vertical");
         Horizontal = Input.GetAxis("Horizontal");
         ground = !Physics.CheckSphere(Feet.position, groundDistance, groundLayer,QueryTriggerInteraction.Ignore);
+       
+        if(lastDamage == false){
         Movement();
         Rotation();
+        }
+
     }
 
     public void TakeDamage(float damage)
     {
+        Dam.transform.rotation = transform.localRotation;
+        
+        if( Life >0)
+        {
         Life -= damage;
         //Particle.Play();
+        Dano.GetComponent<Animator>().SetBool("Damaging", true);
+
         //UpdateHealthBar();
         if(Acceleration > 0)
         {
             Acceleration -= 4;
         }
+        }
+        else if(lastDamage == false)
+        {
+            Dano.GetComponent<Animator>().SetBool("Destruction", true);
+            Acceleration = 0;
+            lastDamage = true;
+        }
+
     }
 
     void UpdateHealthBar()
