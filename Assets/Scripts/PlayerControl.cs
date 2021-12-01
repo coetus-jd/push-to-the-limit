@@ -43,8 +43,6 @@ public class PlayerControl : MonoBehaviour
 
     [SerializeField]
     private SpriteRenderer SpriteRenderer;
-    [SerializeField]
-    private ParticleSystem Particle;
 
     [Header("Parallax")]
     [SerializeField]
@@ -75,7 +73,7 @@ public class PlayerControl : MonoBehaviour
     private Transform Dam;
     [SerializeField]
     private GameObject Dano;
-    private bool lastDamage = false;
+    private bool lastDamage;
 
 
     void Start()
@@ -108,10 +106,8 @@ public class PlayerControl : MonoBehaviour
         if( Life >0)
         {
         Life -= damage;
-        //Particle.Play();
         Dano.GetComponent<Animator>().SetBool("Damaging", true);
-
-        //UpdateHealthBar();
+ 
         if(Acceleration > 0)
         {
             Acceleration -= 4;
@@ -123,6 +119,7 @@ public class PlayerControl : MonoBehaviour
             Acceleration = 0;
             lastDamage = true;
         }
+        UpdateHealthBar();
 
     }
 
