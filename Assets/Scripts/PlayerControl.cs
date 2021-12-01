@@ -10,6 +10,8 @@ public class PlayerControl : MonoBehaviour
 {
     public float Life { get; private set; } = 100;
 
+    
+
     [Header("Physics")]
     [SerializeField]
     private Collider Col;
@@ -36,6 +38,12 @@ public class PlayerControl : MonoBehaviour
 
     private float Vertical;
     private float Horizontal;
+
+    [Header("FireBurst")]
+    [SerializeField]
+    private Transform fire;
+    [SerializeField]
+    private GameObject burst;
 
     [Header("Animation")]
     [SerializeField]
@@ -91,6 +99,8 @@ public class PlayerControl : MonoBehaviour
         Vertical = Input.GetAxis("Vertical");
         Horizontal = Input.GetAxis("Horizontal");
         ground = !Physics.CheckSphere(Feet.position, groundDistance, groundLayer,QueryTriggerInteraction.Ignore);
+        fire.transform.rotation = transform.localRotation;
+        burst.GetComponent<Animator>().SetFloat("Accel2", Acceleration);
        
         if(lastDamage == false){
         Movement();
@@ -139,6 +149,8 @@ public class PlayerControl : MonoBehaviour
                     Acceleration += Speed * Time.deltaTime * ReductionForce;
                 else
                     Acceleration += Speed * Time.deltaTime;
+                    burst.GetComponent<Animator>().SetBool("Accel1", true);
+                    
             }
             else if(Acceleration >=-30)
             {
@@ -146,6 +158,8 @@ public class PlayerControl : MonoBehaviour
                     Acceleration -= Speed * Time.deltaTime * ReductionForce;
                 else
                     Acceleration -= Speed * Time.deltaTime;
+
+                    burst.GetComponent<Animator>().SetBool("Accel1",false);
             }
             Rb.velocity = Acceleration * transform.forward;
         }
@@ -157,7 +171,7 @@ public class PlayerControl : MonoBehaviour
                 Acceleration = 0;
 
             Rb.velocity = Acceleration * transform.forward;
-            
+            burst.GetComponent<Animator>().SetBool("Accel1",false);
         }
         else
         {
