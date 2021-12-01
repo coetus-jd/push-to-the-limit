@@ -43,6 +43,8 @@ public class PlayerControl : MonoBehaviour
 
     [SerializeField]
     private SpriteRenderer SpriteRenderer;
+    [SerializeField]
+    private ParticleSystem Particle;
 
     [Header("Parallax")]
     [SerializeField]
@@ -68,7 +70,7 @@ public class PlayerControl : MonoBehaviour
     [SerializeField]
     public GameObject HealthBarObject;  // Objeto pai das barras
     private Vector3 HealthBarScale;     //Tamanho da barra
-    private float HealthPercent;        //Pencentual de vida para o calculo do tamanho da barra
+    private float HealthPercent;       //Pencentual de vida para o calculo do tamanho da barra
 
 
     void Start()
@@ -93,7 +95,12 @@ public class PlayerControl : MonoBehaviour
     public void TakeDamage(float damage)
     {
         Life -= damage;
-        UpdateHealthBar();
+        //Particle.Play();
+        //UpdateHealthBar();
+        if(Acceleration > 0)
+        {
+            Acceleration -= 4;
+        }
     }
 
     void UpdateHealthBar()
