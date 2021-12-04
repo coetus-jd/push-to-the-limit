@@ -8,20 +8,18 @@
 
 ## :open_book: About
 
-This project is a simple 2D platform game where you control a slave in search of freedom. The game takes place in a cave where there are skeletons with muskets and swords that will try to kill you before you reach Corsair's territory.
-
 <!-- > Play on [Itch.io](https://pferreirafabricio.itch.io) -->
 
 ## 👀 Overview
 
 <!-- https://user-images.githubusercontent.com/42717522/134168449-81d6662c-acc7-49ae-afb2-0f574ef2922d.mp4 -->
 
-<p align="center">
+<!--<p align="center">
   <img src="./Docs/Screenshots/PressStart.png" width="1000px" height="auto"/> <br/><br/>
   <img src="./Docs/Screenshots/Home.png" width="1000px" height="auto"/> <br/><br/>
   <img src="./Docs/Screenshots/Options.png" width="1000px" height="auto"/> <br/><br/>
   <img src="./Docs/Screenshots/Register.png" width="1000px" height="auto"/> <br/><br/>
-</p>
+</p>-->
 
 ## :bricks: This project was built with: 
 - [Unity](https://unity.com/)
