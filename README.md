@@ -1,5 +1,9 @@
 <h5 align="center">
-  <img src="./Docs/Coetus.png" style="margin-right: 20px" width="250px" /><br>  
+  <img src="./Docs/Coetus.png" width="250px" />
+  &nbsp;&nbsp;&nbsp; 
+  <img src="./Docs/Logo.png" height="80px" />
+  <br>  
+  <br>  
   <b>A FZero-like game</b> 🚘
 </h5>
 <p align="center">
@@ -14,12 +18,13 @@
 
 <!-- https://user-images.githubusercontent.com/42717522/134168449-81d6662c-acc7-49ae-afb2-0f574ef2922d.mp4 -->
 
-<!--<p align="center">
+<p align="center">
   <img src="./Docs/Screenshots/PressStart.png" width="1000px" height="auto"/> <br/><br/>
-  <img src="./Docs/Screenshots/Home.png" width="1000px" height="auto"/> <br/><br/>
-  <img src="./Docs/Screenshots/Options.png" width="1000px" height="auto"/> <br/><br/>
-  <img src="./Docs/Screenshots/Register.png" width="1000px" height="auto"/> <br/><br/>
-</p>-->
+  <img src="./Docs/Screenshots/Menu.png" width="1000px" height="auto"/> <br/><br/>
+  <img src="./Docs/Screenshots/Phase1.png" width="1000px" height="auto"/> <br/><br/>
+  <img src="./Docs/Screenshots/Phase1-1.png" width="1000px" height="auto"/> <br/><br/>
+  <img src="./Docs/Screenshots/Phase1-2.png" width="1000px" height="auto"/> <br/><br/>
+</p>
 
 ## :bricks: This project was built with: 
 - [Unity](https://unity.com/)
