@@ -11,6 +11,7 @@
 </p>
 
 ## :open_book: About
+This project is a recreation of the game Fzero with inspirations from Star Fox. In the game, you control a student guided by his tutor, who is a scientist, and try to escape the past with the aircraft.
 
 <!-- > Play on [Itch.io](https://pferreirafabricio.itch.io) -->
 
