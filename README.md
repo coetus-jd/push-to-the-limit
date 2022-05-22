@@ -33,7 +33,7 @@ This project is a recreation of the game Fzero with inspirations from Star Fox. 
 - [Blender](https://www.blender.org/)
 
 ## :running_man: Installing and Running  
- 1. Clone this repository `git clone https://github.com/coetus-jd/time-race`;
+ 1. Clone this repository `git clone https://github.com/coetus-jd/time-race`
  2. Open `time-race` folder with Unity and be happy 😄.
  
 ## :handshake: Contributors
@@ -45,7 +45,7 @@ This project is a recreation of the game Fzero with inspirations from Star Fox. 
  - [Leonardo Rezende Nakashima](https://github.com/waterwhirl) - Coding and testing
 
 ## :recycle: Contribute
- 1. Fork this repository;
+ 1. Fork this repository
  2. Create a branch with your feature: ```git checkout -b my-feature```
  3. Commit your changes: ```git commit -m 'feat: My new feature'```
  4. Push your branch: ```git push origin my-feature```
