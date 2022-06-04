@@ -7,7 +7,7 @@
   <b>A FZero-like game</b> 🚘
 </h5>
 <p align="center">
-  <img alt="License" src="https://img.shields.io/badge/License-GPL--3.0-green?style=for-the-badge&labelColor=1C1E26&color=61ffca">
+  <img alt="License" src="https://img.shields.io/badge/License-GPL--3.0-green?style=for-the-badge&labelColor=1C1E26&color=C1200E">
 </p>
 
 ## :open_book: About
